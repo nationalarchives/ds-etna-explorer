@@ -94,6 +94,7 @@ There are several known accessibility issues. In no particular order, these are:
 * Users found the **distribution graphic to be 'bunched up'** when applied to longer periods
 * Users were not always clear that **the four digit numbers are years**
 * Users have described the record distribution graphic as **'gimmicky'**
+* It is not always clear if/how elements of a page change in response to user actions (For example, it is very easy to miss that the results themselves or the record count has changed)
 * Users had difficulty understanding that the **date controls and time periods work independently** of each other
 * UX colleagues have **recommended marking key events on the timeline** but known issues about the current prototype show this would introduce additional usability and accessibility issues.
 * The histogram presentation has led users to **believe they can click on the individual bars**. This is not currently possible and would present additional usability and accessibility issues if it was.
@@ -105,6 +106,8 @@ There are several known accessibility issues. In no particular order, these are:
 * Does it matter that the dating of records can lead to confusing results? For example, records relating to The United States appear where a filter has been applied from 1075 to 1094. See [this example](https://alpha.nationalarchives.gov.uk/collectionexplorer/?start_year=1075&end_year=1094&era=medieval)
 * What is a key event and how do these relate to time periods? Is WWII both a key event and a time period?
 * Do we still need to keep all items available when a user has made a selection? For example, if a user has refined to late 20th century, do they still need to see the Medieval time period?
+* Is there a point at which the record distribution graph is no longer useful to user? 
+* Do people want to interact with the content using different filters at different levels? For example, do people need to apply a subject filter when at 'All periods'?  
 
 ## Initial thoughts
 
