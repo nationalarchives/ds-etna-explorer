@@ -99,6 +99,7 @@ There are several known accessibility issues. In no particular order, these are:
 * UX colleagues have **recommended marking key events on the timeline** but known issues about the current prototype show this would introduce additional usability and accessibility issues.
 * The histogram presentation has led users to **believe they can click on the individual bars**. This is not currently possible and would present additional usability and accessibility issues if it was.
 * The are circumstances where the controls do not match the record distribution graphic which may lead to confusion ![Bar mismatch](images/bar_mismatch.png "Bar mismatch")
+* There are circumstances where if the explorer is linked to with a date boundary, but no era specified, the histogram will display as all periods, but the slider will display a strict date boundary. Therefore the histogram is not properly zoomed to the specific date boundaries.  ![Histogram issue](images/histogram_issue.png)
 
 ## Questions that we have 
 
