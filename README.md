@@ -24,7 +24,8 @@ This repository is a place to capture information relating to:
 
 ## Background
 
-The purpose of the widget is to facilitate exploration of the collection using the dimension of time. The prototype developed during Alpha can be found in the [explorer prototype](https://alpha.nationalarchives.gov.uk/collectionexplorer/?start_year=0974&end_year=1485&era=medieval). 
+The purpose of the widget is to facilitate exploration of the collection using the dimension of time. A prototype developed during Alpha from [a workshop sketch](
+https://raw.githubusercontent.com/nationalarchives/ds-alpha/master/ux/ideation/sketching-session-1/IMG_20200121_150131.jpg?token=AD2CJS4H6MLXNVSXSG4OX2C7VUGP2) can be found in the [explorer prototype](https://alpha.nationalarchives.gov.uk/collectionexplorer/?start_year=0974&end_year=1485&era=medieval). 
 
 As can be seen below, the current widget has six discrete elements: 
 
@@ -51,7 +52,7 @@ Depending on the interaction there are subtle differences to the way the page is
 ### Select a time period
 
 By default the time period shown is 'All periods'. The user can then, optionally, select from a list of a pre-defined time periods. These include:
-* All periods (this is the default)
+* **All periods** (this is the default)
 * A list (presented left-to-right in _reverse chronological_ order) as:
     * **Postwar** (75+ years covering 2.8 million records)
     * **Second World War** (6 years covering 1 million records)
