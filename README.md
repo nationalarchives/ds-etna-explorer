@@ -1,3 +1,16 @@
+## Contents
+
+* [Background](#background)
+* [Interactions in the current prototype](#interactions-in-the-current-prototype)
+  * [Select a time period](#select-a-time-period)
+  * [Change start and end date](#change-start-and-end-date)
+* [Known issues](#known-issues)
+  * [Accessibility issues](#accessibility-issues)
+  * [Usability and other issues](#usability-and-other-issues)
+* [Questions that we have](#questions-that-we-have)
+* [Initial thoughts](#initial-thoughts)
+  
+
 # Time explorer
 
 This repository is a place to capture information relating to:
@@ -33,12 +46,9 @@ As can be seen below, there are two interactions available to users:
 
 Depending on the interaction there are subtle differences to the way the page is updated. 
 
-<figure style="max-width: 70%; margin: auto">
-    <img src="images/explorer_flow.png" alt="">
-</figure>
+![Explorer flow](images/explorer_flow.png "Explorer flow")
 
-
-#### Select a time period
+### Select a time period
 
 By default the time period shown is 'All periods'. The user can then, optionally, select from a list of a pre-defined time periods. These include:
 * All periods (this is the default)
@@ -52,11 +62,13 @@ By default the time period shown is 'All periods'. The user can then, optionally
     * **Early modern** (265 years covering 1.1 million records)
     * **Medieval** (511 years covering 0.1 million records)
 
-#### Change start and end date
+It is currently also possible to reach the widget from a details page with the start and end dates and record distribution graphic set by the corresponding record. In this case there is no time period selected and 'Custom date range' is presented.
+
+### Change start and end date
 
 Changing the start or end date updates the number of records shown and greys out bars within the record distribution graphic outside of the new selection.
 
-There is no functional connection from the date controls to the time periods. For example, if a user was to use the date controls to refine to, say, the years which correspond to the Interwar period, the time period presentaiton would not be updated to reflect this. Similarly, while it is possible to access the explorer page with date periods applied these are not reflected in the time periods. For an example of this, click the 'dated' link in [this record](https://alpha.nationalarchives.gov.uk/journey/record/E/40/4913)
+There is no functional connection from the date controls to the time periods. For example, if a user was to use the date controls to refine to, say, the years which correspond to the Interwar period, the time periods element would not be updated to reflect this. Similarly, while it is possible to access the explorer page with date periods applied these are not reflected in the time periods. For an example of this, click the 'dated' link in [this record](https://alpha.nationalarchives.gov.uk/journey/record/E/40/4913)
         
 ## Known issues
 
@@ -67,12 +79,12 @@ The current implementation has significant accessibility problems and usability 
 There are several known accessibility issues. In no particular order, these are:
 
 * The **distribution graphic has no text equivalent** to communicate the information to users who are unable to perceive the graphic
-* The current approach requires very fine adjustments that is likely to cause significant issues for users with motor impairments and those using crude input devices (such as touch screens)
-* Displaying distributions from 0 to the millions within a maximum heigh of 130 often results in **bars that are very difficult to see**. ![Bars which represent thousands of records are difficult to distinguish](images/difficult_to_differentiate.png "Bars which represent thousands of records are difficult to distinguish")
+* The current approach requires **very fine adjustments** that is likely to cause significant issues for users with motor impairments and those using crude input devices (such as touch screens)
+* Displaying distributions from 0 to the millions within a maximum height of 130 often results in **bars that are very difficult to see**. ![Bars which represent thousands of records are difficult to distinguish](images/difficult_to_differentiate.png "Bars which represent thousands of records are difficult to distinguish")
 * **Controls overlap and obscure** each other rendering the information **invisible** and the controls **unreachable**. ![Controls overlap each other](images/controls_overlap.png "Controls overlap each other")
 * The start and end date refinements **do not provide adequate keyboard accessibility** (in that they can require keyboard to make hundreds of changes)
 
-**Note: these are just the immediately apparent accessibility problems. An audit would almost certainly introduce others.** 
+**Note: these are just the immediately apparent accessibility problems. An audit would almost certainly reveal others.** 
 
 ### Usability and other issues
 
@@ -82,9 +94,9 @@ There are several known accessibility issues. In no particular order, these are:
 * Users were not always clear that **the four digit numbers are years**
 * Users have described the record distribution graphic as **'gimmicky'**
 * Users had difficulty understanding that the **date controls and time periods work independently** of each other
-* UX colleagues have **recommended marking key events on the timeline**, but the current presentation is not suited to this as it would present additional usability and accessibility issues if they were (this includes but is not limited to the potential for key events to overlap)
+* UX colleagues have **recommended marking key events on the timeline** but known issues about the current prototype show this would introduce additional usability and accessibility issues.
 * The histogram presentation has led users to **believe they can click on the individual bars**. This is not currently possible and would present additional usability and accessibility issues if it was.
-
+* The are circumstances where the controls do not match the record distribution graphic which may lead to confusion ![Bar mismatch](images/bar_mismatch.png "Bar mismatch")
 
 ## Questions that we have 
 
