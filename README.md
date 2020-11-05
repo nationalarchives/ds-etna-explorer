@@ -103,12 +103,16 @@ There are several known accessibility issues. In no particular order, these are:
 
 * Does the distribution graph help a non-user understand what they are looking at and where to go next? Where does the distribution graph sit in the content priority?
 * Does it matter that the dating of records can lead to confusing results? For example, records relating to The United States appear where a filter has been applied from 1075 to 1094. See [this example](https://alpha.nationalarchives.gov.uk/collectionexplorer/?start_year=1075&end_year=1094&era=medieval)
+* What is a key event and how do these relate to time periods? Is WWII both a key event and a time period?
+* Do we still need to keep all items available when a user has made a selection? For example, if a user has refined to late 20th century, do they still need to see the Medieval time period?
 
 ## Initial thoughts
 
 * Should we represent the ability to browse by time on details pages?
 * Is it more helpful to show users (on the details page) where they are in time (i.e. Early modern)?
 * Should we have different visualisations/treatments to suit the scale of content (i.e. all periods vs Second World War)
+* The cause and effect of things is not very clear. For example, upon entering via 'All periods' you are shown a dense histogram and this can change to large blocks. 
+* Search and browse are very different things and we feel it is confusing for users to show functionality which looks like search on something that is not a search tool.
 
 ## Other options to consider
 
