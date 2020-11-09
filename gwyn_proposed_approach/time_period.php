@@ -19,7 +19,7 @@
                     <figure>
                         <img src="https://via.placeholder.com/1600x450?text=Time period specific infographic"
                              alt="Time period specific infographic">
-                        <caption>How the collection is distributed over the centuries</caption>
+                        <caption>How recprds are distributed over the medieval period</caption>
                     </figure>
                 </article>
             </main>
@@ -29,6 +29,10 @@
                 <form class="tna-form">
                     <h2>Refinements</h2>
                     <fieldset>
+                        <div class="tna-form__row tna-form__checkbox">
+                            <input type="checkbox" id="news_yes" name="newsletter" value="yes">
+                            <label for="news_yes">Show key documents only</label>
+                        </div>
                         <div class="tna-form__row">
                             <label for="start_date">Start date</label>
                             <input type="date" name="start_date" placeholder="YYYY" value="974">

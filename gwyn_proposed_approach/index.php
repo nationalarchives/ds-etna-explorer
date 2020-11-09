@@ -20,7 +20,7 @@
                             While we hold more than 100,000 records from medieval times the collection contains millions
                             that were created since the 1750s.</p>
                         <figure>
-                            <img src="https://via.placeholder.com/1600x450?text=Record+distribution+graphic"
+                            <img src="https://via.placeholder.com/1600x450?text=Record+distribution+infographic"
                                  alt="Distribution of records over time">
                             <caption>How the collection is distributed over the centuries</caption>
                         </figure>

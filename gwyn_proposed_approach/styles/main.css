@@ -24,3 +24,8 @@ a {
 li:not(:first-child) a:hover {
     cursor: not-allowed;
 }
+
+.meta {
+    padding: 1em;
+    background-color: cornsilk;
+}
