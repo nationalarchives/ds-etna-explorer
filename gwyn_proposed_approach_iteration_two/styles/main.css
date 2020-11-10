@@ -1,0 +1,31 @@
+img {
+    max-width: 100%!important;
+}
+
+figure {
+
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.home .tna-form fieldset {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-period input {
+    max-width: 100%!important;
+    min-width: auto!important;
+}
+
+li:not(:first-child) a:hover {
+    cursor: not-allowed;
+}
+
+.meta {
+    padding: 1em;
+    background-color: cornsilk;
+}
