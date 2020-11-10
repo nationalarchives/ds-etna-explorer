@@ -1,3 +1,4 @@
+<?php include 'includes/functions.php' ?>
 <!doctype html>
 <html lang="en">
 <?php include 'includes/head.php' ?>
@@ -17,40 +18,23 @@
                             government and life in the Anglo-Saxon and Medieval periods.</p>
                     </div>
                     <figure>
-                        <img src="https://via.placeholder.com/1600x450?text=Time period specific infographic"
+                        <img src="https://via.placeholder.com/800x225?text=Time period specific infographic"
                              alt="Time period specific infographic">
-                        <caption>How recprds are distributed over the medieval period</caption>
+                        <caption>
+                            <details>
+                                <summary>How records are distributed over the medieval period</summary>
+                                There is a general distribution towards later years in the medieval period. For example, 56 records are available from the first 100 years whereas there are more than 66 thousand from the last 100 years in the period.
+                            </details>
+                        </caption>
                     </figure>
+                    <h2>Explore the medieval period</h2>
+                    You can explore the medieval period by:
+                    <ul>
+                        <li><a href="/highlighted-documents-medieval.php">View highlighted documents from this period</a></li>
+                        <li>You can also choose to explore <a href="/results.php">all items from this period</a> or <a href="/results.php?digitised">only those items which have been scanned and can be viewed online</a></li>
+                    </ul>
                 </article>
             </main>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-2">
-                <form class="tna-form">
-                    <h2>Refinements</h2>
-                    <fieldset>
-                        <div class="tna-form__row tna-form__checkbox">
-                            <input type="checkbox" id="news_yes" name="newsletter" value="yes">
-                            <label for="news_yes">Show key documents only</label>
-                        </div>
-                        <div class="tna-form__row">
-                            <label for="start_date">Start date</label>
-                            <input type="date" name="start_date" placeholder="YYYY" value="974">
-                        </div>
-                        <div class="tna-form__row">
-                            <label for="end_date">End date</label>
-                            <input type="date" name="end_date" placeholder="YYYY" value="1485">
-                            <label for="">&nbsp;</label>
-                            <input class="tna-button" type="submit" value="Show records">
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="col-xs-12 col-sm-10">
-                <h2>Results</h2>
-                <?php include 'includes/results.php' ?>
-            </div>
-
         </div>
     </div>
 </div>

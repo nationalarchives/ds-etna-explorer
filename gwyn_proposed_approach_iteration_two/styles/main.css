@@ -29,3 +29,12 @@ li:not(:first-child) a:hover {
     padding: 1em;
     background-color: cornsilk;
 }
+
+ul#search-results {
+    list-style-type: none;
+    padding: 0;
+}
+
+#banner {
+    background-color: lightgrey;
+}

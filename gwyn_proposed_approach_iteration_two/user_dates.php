@@ -1,3 +1,4 @@
+<?php include 'includes/functions.php' ?>
 <!doctype html>
 <html lang="en">
 
@@ -32,7 +33,7 @@
                 </form>
             </div>
             <div class="col-xs-12 col-sm-10">
-                <?php include 'includes/results.php' ?>
+                <?php include 'includes/results_list.php' ?>
             </div>
 
         </div>
