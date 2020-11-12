@@ -1,7 +1,7 @@
 ## Contents
 
 * [Background](#background)
-* [Interactions in the current prototype](#interactions-in-the-current-prototype)
+* [Interactions in the Alpha prototype](#interactions-in-the-current-prototype)
   * [Select a time period](#select-a-time-period)
   * [Change start and end date](#change-start-and-end-date)
 * [Known issues](#known-issues)
