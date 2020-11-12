@@ -1,4 +1,4 @@
-# Pre-sprint proposal 
+# Gwyn's initial proposal 
 
 ## Approach
 
