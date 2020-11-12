@@ -129,6 +129,6 @@ There are several known accessibility issues. In no particular order, these are:
 
 The _current_ proposals for a next iteration are: 
 
-* Ash's (link coming soon)
+* [Ash's](https://ds-beta-timeline-text.herokuapp.com/)
 * Matt's (link coming soon)
 * [Gwyn's](gwyn_proposal_iteration_two)
