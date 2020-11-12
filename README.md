@@ -1,17 +1,17 @@
 ## Contents
 
 * **Alpha prototype**
- * [Background](#background)
- * [Interactions in the Alpha prototype](#interactions-in-the-current-prototype)
-   * [Select a time period](#select-a-time-period)
-   * [Change start and end date](#change-start-and-end-date)
- * [Known issues](#known-issues)
-   * [Accessibility issues](#accessibility-issues)
-   * [Usability and other issues](#usability-and-other-issues)
- * [Questions that we have](#questions-that-we-have)
- * [Initial thoughts](#initial-thoughts)
+   * [Background](#background)
+   * [Interactions in the Alpha prototype](#interactions-in-the-current-prototype)
+     * [Select a time period](#select-a-time-period)
+     * [Change start and end date](#change-start-and-end-date)
+   * [Known issues](#known-issues)
+     * [Accessibility issues](#accessibility-issues)
+     * [Usability and other issues](#usability-and-other-issues)
+   * [Questions that we have](#questions-that-we-have)
+   * [Initial thoughts](#initial-thoughts)
 * **Next iteration**
- * [Proposals](#proposals)
+  * [Proposals](#proposals)
   
 
 # Time explorer
