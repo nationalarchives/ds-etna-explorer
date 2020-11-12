@@ -1,14 +1,17 @@
 ## Contents
 
-* [Background](#background)
-* [Interactions in the Alpha prototype](#interactions-in-the-current-prototype)
-  * [Select a time period](#select-a-time-period)
-  * [Change start and end date](#change-start-and-end-date)
-* [Known issues](#known-issues)
-  * [Accessibility issues](#accessibility-issues)
-  * [Usability and other issues](#usability-and-other-issues)
-* [Questions that we have](#questions-that-we-have)
-* [Initial thoughts](#initial-thoughts)
+* **Alpha prototype**
+ * [Background](#background)
+ * [Interactions in the Alpha prototype](#interactions-in-the-current-prototype)
+   * [Select a time period](#select-a-time-period)
+   * [Change start and end date](#change-start-and-end-date)
+ * [Known issues](#known-issues)
+   * [Accessibility issues](#accessibility-issues)
+   * [Usability and other issues](#usability-and-other-issues)
+ * [Questions that we have](#questions-that-we-have)
+ * [Initial thoughts](#initial-thoughts)
+* **Next iteration**
+ * [Proposals](#proposals)
   
 
 # Time explorer
@@ -121,3 +124,11 @@ There are several known accessibility issues. In no particular order, these are:
 ## Other options to consider
 
 [Historpedia.js](https://js.histropedia.com/index.html) has been mentioned as an approach that might be worth considering. This is a JavaScript-powered visualisation tool.
+
+# Propsals
+
+The _current_ proposals for a next iteration are: 
+
+* Ash's (link coming soon)
+* Matt's (link coming soon)
+* [Gwyn's](gwyn_proposal_iteration_two)
