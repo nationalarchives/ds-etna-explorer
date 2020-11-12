@@ -125,7 +125,7 @@ There are several known accessibility issues. In no particular order, these are:
 
 [Historpedia.js](https://js.histropedia.com/index.html) has been mentioned as an approach that might be worth considering. This is a JavaScript-powered visualisation tool.
 
-# Propsals
+# Proposals
 
 The _current_ proposals for a next iteration are: 
 
