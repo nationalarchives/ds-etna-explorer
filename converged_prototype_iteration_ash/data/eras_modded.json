@@ -1,0 +1,77 @@
+{
+    "early-20th-century": {
+        "end_date": "1918-12-31",
+        "start_date": "1901-01-01",
+        "text": "Read original documents relating to Suffragettes, the Russian Revolution and the First World War. Cabinet papers, battle plans, maps and unit war diaries chronicle the conflict between Europe\u2019s great powers.",
+        "facts":["Facts for early 20th era", "Should be added here"],
+        "results":[]
+    },
+    "early-modern": {
+        "end_date": "1750-12-31",
+        "start_date": "1485-01-01",
+        "text": "Follow the complex manoeuvres, plots and double dealings of the Tudor and Stuart courts and the Jacobite risings of 1715 and 1745, through our records in this period dominated by religious conflict and conspiracy.",
+        "facts": ["Facts for early modern era", "Should be added here"],
+        "results":[]
+    },
+    "empire-and-industry": {
+        "end_date": "1850-12-31",
+        "start_date": "1750-01-01",
+        "text": "Find out about the impact of the Industrial Revolution and how living and working conditions changed for many in Britain. Political protest and crime and punishment are key themes in our resources for this period.",
+        "facts":["Facts for empire and industry era", "Should be added here"],
+        "results":[]
+    },
+    "interwar": {
+        "end_date": "1939-12-31",
+        "start_date": "1918-01-01",
+        "text": "Study records relating to the rise of dictators, the failure of international diplomacy and Britain\u2019s preparations for the Second World War. Discover more about life in 1930s Britain including unemployment, slum clearance and leisure.",
+        "facts":["Facts for interwar era", "Should be added here"],
+        "results":[]
+    },
+    "medieval": {
+        "end_date": "1485-12-31",
+        "start_date": "0974-01-01",
+        "text": "William the Conqueror\u2019s Domesday survey aimed to put every inch of his new kingdom on paper. But Anglo-Saxon and Medieval England can also be found in the Magna Carta and other treaties, charters, letters and financial records that all combine to give us a picture of government and life in the Anglo-Saxon and Medieval periods.",
+        "facts":["Facts for medieval era", "Should be added here"],
+        "results":[]
+    },
+    "postwar": {
+        "end_date": "2020-12-31",
+        "start_date": "1945-01-01",
+        "text": "Discover Cold War reports from behind the Iron Curtain, find out what it was like to live in Attlee\u2019s Britain or explore documents on Indian Partition.",
+        "facts":["Facts for postwar era", "Should be added here"],
+        "results":[]
+    
+    },
+    "second-world-war": {
+        "end_date": "1945-12-31",
+        "start_date": "1939-01-01",
+        "text": "Our records cover the history of the Second World War including the roles of Churchill, Roosevelt and Stalin. Find out more about the Holocaust and life on the Home Front.",
+        "facts": ["981988 are available in this era. This makes up 20% of our collection.", "Most of these records are from the War Office department, due to WW2.", 
+            "526,984 of these records are available for download.", "455004 of these records are only available to view at Kew, or by requesting a copy order."],
+        "results" : [
+            ["https://www.nationalarchives.gov.uk/wp-content/uploads/2019/03/MH-134_6_1948-1957-booklet.jpg",
+                "Ministry of Labour & National Insurance: Various Campaigns", "https://alpha.nationalarchives.gov.uk/journey/record/INF%202/66"],
+            ["https://nationalarchives.github.io/ds-alpha-analytics-service/thumbs/18073.jpg", 
+                "The Recipe for the Empire Christmas Pudding; Artist: F C Harrison",
+            "https://alpha.nationalarchives.gov.uk/journey/record/CO%20956/63"], 
+            ["https://nationalarchives.github.io/ds-alpha-analytics-service/thumbs/22287.jpg", 
+                "The official Home Office cat", "https://alpha.nationalarchives.gov.uk/journey/record/HO%20223/43",
+            "https://alpha.nationalarchives.gov.uk/journey/record/HO%20223/43"],
+            ["https://nationalarchives.github.io/ds-alpha-analytics-service/thumbs/27847.jpg", 
+                "Letter written by person claiming to be 'Jack the Ripper' to Dr T H Openshaw of the London Hospital, Whitechapel, dated 29 October 1888. The subject of the letter is the human kidney which was sent to G Lusk of the Whitechapel Vigilance Committee",
+            "https://alpha.nationalarchives.gov.uk/journey/record/MEPO%203/3157"],
+            ["https://nationalarchives.github.io/ds-alpha-analytics-service/thumbs/18777.jpg", "\"Chariot\" (raid on St Nazaire) Part 3", "https://alpha.nationalarchives.gov.uk/journey/record/DEFE%202/127"],
+        ["https://nationalarchives.github.io/ds-alpha-analytics-service/thumbs/54750.jpg", "Eric BLAIR alias George ORWELL: Communist; record file", "https://alpha.nationalarchives.gov.uk/journey/record/MEPO%2038/69"],
+            ["https://nationalarchives.github.io/ds-alpha-analytics-service/thumbs/23096.jpg", "GP extracts for BP Air Section: include translated messages on results of Allied air raids, with details of captured Allied airmen and burial details of those killed; details of massed escape of 80 RAF officers from POW camp at Sagan, Mar 25 1944", "https://alpha.nationalarchives.gov.uk/journey/record/HW%2016/14"]]
+    },
+    "victorians": {
+        "end_date": "1901-12-31",
+        "start_date": "1850-01-01",
+        "text": "The British Empire, crime, punishment, leisure and advertising are all brought to life in our resources which are based on records from the second half of Queen Victoria\u2019s reign.",
+        "facts": ["Facts for victorian era", "Should be added here"],
+        "results":[]
+    },
+    "custom-date-range": {
+        "text": "From The Domesday Book to recent Cabinet papers, 1,000 years of international history are preserved in millions of records. Explore wars, revolutions, life stories and landmark rulings, and iconic figures including Shakespeare, Queen Victoria, Gandhi and Churchill."
+    }
+}
