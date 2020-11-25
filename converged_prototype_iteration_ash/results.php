@@ -26,7 +26,9 @@ $time_period = "(" . $start_date . " - " . $end_date . ")";
 $description = $eras_data[$era]["text"];
 
 $text_visualisation = $eras_data[$era]["facts"];
-$results = $eras_data[$era]["results"]
+$results = $eras_data[$era]["results"];
+$total_records = $eras_data[$era]["total_records"];
+$total_records = number_format($total_records);
 ?>
 
 <body>
@@ -41,7 +43,7 @@ $results = $eras_data[$era]["results"]
         <a class="tna-button" href="/">Return to start page</a>
         </div>
        
-        <h2 id="records-available">981,988 records available</h2> <button class="tna-button" id="refine-button">Show refine options</button>
+        <h2 id="records-available"><?php echo $total_records ?> records available</h2> <button class="tna-button" id="refine-button">Show refine options</button>
         <div class="grey-bg" id="refine-container">
             <h2 class="text-center mt-5" id="refine-heading">Refine your results</h2>
             <div class="center">

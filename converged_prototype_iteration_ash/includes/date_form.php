@@ -7,13 +7,13 @@ $end_date = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 <form class="tna-form" action="/results.php?era=custom" method="get">
     <fieldset>
         <div class="tna-form__row">
-            <label for="start_date">Start date</label>
-            <input required type="date" pattern="\d{3,4}" name="start_date" placeholder="YYYY"
+            <label for="start_date">Start year</label>
+            <input type="number" name="start_date" placeholder="YYYY"
                    value="<?php echo $start_date ?>">
         </div>
         <div class="tna-form__row">
-            <label for="end_date">End date</label>
-            <input required type="date" pattern="\d{3,4}" name="end_date" placeholder="YYYY"
+            <label for="end_date">End year</label>
+            <input type="number" name="end_date" placeholder="YYYY"
                    value="<?php echo $end_date ?>">
         </div>
         <div class="tna-form__row">
