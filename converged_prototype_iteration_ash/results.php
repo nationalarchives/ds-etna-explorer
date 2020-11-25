@@ -34,7 +34,7 @@ $results = $eras_data[$era]["results"]
 
 <main role="main">
     <div class="container">
-
+    <img src="/images/tna-square-logo.svg" id="logo" alt="The National Archives Square Logo"/>
         <h1><?php echo $title . " "; echo $time_period; ?></h1>
         <div>
         <p class="lead"><?php echo $description ?></p>

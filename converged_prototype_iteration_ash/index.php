@@ -8,6 +8,7 @@
         <div class="container">
             <div class="row">
                 <main class="col-xs-12 col-sm-8" role="main">
+                <img src="/images/tna-square-logo.svg" id="logo" alt="The National Archives Square Logo"/>
                     <article>
                         <div class="tna-page__header">
                             <h1>Explore the collection through time</h1>
