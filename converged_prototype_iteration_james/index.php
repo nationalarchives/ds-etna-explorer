@@ -8,8 +8,10 @@
     <link rel='stylesheet' id='tna-google-fonts-css'
           href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400i%2C700%2C700i%7CRoboto%3A400%2C700&#038;display=swap&#038;ver=5.4.2'
           type='text/css' media='all'/>
+    <link rel="stylesheet" id="tna-google-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400i%2C700%2C700i%7CRoboto+Mono%3A400%2C700&amp;display=swap&amp;ver=5.4.4" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdn.nationalarchives.gov.uk/toolkit/dist/css/navi.0.0.4.min.css">
     <link rel="stylesheet" href="styles/home.css" type="text/css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body class="css">
@@ -142,7 +144,7 @@
             <ul class="expand-list">
                 <li><a href="#expando2"><h3>Explore highlights from the collection</h3></a>
                     <div class="expando" id="expando2">
-                        <p>Our experts have identified <a href="second-world-war.php">highlighted documents</a> from the 1,000 years of
+                        <p>Our experts have identified <a href="featured.php">highlighted documents</a> from the 1,000 years of
                             history held by The National Archives</p>
                     </div>
                 </li>
@@ -152,16 +154,16 @@
                 <li><a href="#expando3"><h3>Choose your own years</h3></a>
                     <div class="expando" id="expando3">
                         <p>You can also enter the dates you would like to refine by</p>
-                        <form class="tna-form" action="second-world-war.php" method="get">
+                        <form class="tna-form" action="custom-range.php" method="get">
                             <fieldset>
                                 <div class="tna-form__row">
-                                    <label for="start-date">Start date</label>
-                                    <input required type="date" pattern="\d{3,4}" id="start-date" name="start-date" placeholder="YYYY"
+                                    <label for="start-year">Start year</label>
+                                    <input required type="text" pattern="\d{4}" id="start-year" name="start-year" placeholder="YYYY"
                                            value="">
                                 </div>
                                 <div class="tna-form__row">
-                                    <label for="end-date">End date</label>
-                                    <input required type="date" pattern="\d{3,4}" id="end-date" name="end_date" placeholder="YYYY"
+                                    <label for="end-year">End year</label>
+                                    <input required type="text" pattern="\d{4}" id="end-year" name="year" placeholder="YYYY"
                                            value="">
                                 </div>
                                 <div class="tna-form__row">
@@ -176,8 +178,8 @@
 
             <ul class="expand-list">
                 <li><a href="#expando4"><h3>See everything</h3></a>
-                    <div class="col-lg-12 expando" id="expando4">
-                        <p>You can also choose to explore <a href="second-world-war.php">all items in the collection</a> or
+                    <div class="expando" id="expando4">
+                        <p>You can also choose to explore <a href="all-records.php">all items in the collection</a> or
                             <a href="/results.php?digitised">only those items which have been scanned and can be viewed online</a>
                         </p>
                     </div>
@@ -189,7 +191,12 @@
     </main>
 </body>
 <footer>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    <script src="scripts/refine.js"></script>
 </footer>
 </html>
 

@@ -1,20 +1,3 @@
-.css .tna-button {
-    background-color: #26262a;
-    color: #fff;
-    border: 2px solid #26262a;
-    padding: 0.5em 0.9em;
-    display: inline-block;
-    min-width: 24px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.css .tna-button:hover {
-    background-color: #fff;
-    color: #26262a;
-    text-decoration: none;
-}
-
 .css body    {
     font-family: "Open Sans", sans-serif;
 }
@@ -53,6 +36,25 @@
     outline: 1px solid #134571;
     text-decoration: underline;
 }
+.css .tna-button {
+    background-color: #26262a;
+    color: #fff;
+    border: 2px solid #26262a;
+    padding: 0.5em 0.9em;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.css .tna-button:hover {
+    background-color: #fff;
+    color: #26262a;
+    text-decoration: none;
+}
+.css a.tna-button{
+    margin-right: 1em;
+}
 
 .css .tna-form-row {
     width: 100%;
@@ -80,6 +82,29 @@
 
 .css .expand-list li {
     list-style: none;
+}
+
+.css .expand-list li > a {
+    background-color: #26262a;
+    color: #fff;
+    border: 2px solid #26262a;
+    padding: 0.5em 0.9em;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.css .expand-list li > a:hover {
+    background-color: #fff;
+    color: #26262a;
+    text-decoration: none;
+}
+
+.css .expand-list li > a h3 {
+    margin: 0;
+    font-size: 20px;
 }
 
 .css figure {

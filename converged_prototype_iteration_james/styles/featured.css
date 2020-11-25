@@ -1,0 +1,30 @@
+.css .refine-results-form {
+    margin-bottom: 2em;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    background: #eee;
+    padding: 0.5em 3em 1em;
+}
+
+.css .results-container {
+    margin-top: 2em;
+    height: 50em;
+    background: #eee;
+    padding: 0.5em 3em 1em;
+}
+
+.css .card {
+    height: 200px;
+}
+.css fieldset {
+    margin-bottom: 1em;
+}
+.css .form-section-title {
+    margin-bottom: 1em;
+}
+.css .filter {
+    margin-right: 1em;
+}
+.css .form-section-title span {
+    font-size: 24px;
+}
