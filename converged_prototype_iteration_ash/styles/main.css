@@ -84,6 +84,7 @@ legend {
 }
 #refine-button {
     display: none;
+    margin-bottom: 7px;
 }
 
 a:hover img {
