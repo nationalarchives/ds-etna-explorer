@@ -15,7 +15,7 @@ $title = ucwords($title);
 
 if($era == "custom-date-range") {
     $start_date = substr($_GET["start_date"], 0, 4);
-    $end_date = substr($_GET["start_date"], 0, 4);
+    $end_date = substr($_GET["end_date"], 0, 4);
 }
 else {
     $start_date = substr($eras_data[$era]["start_date"], 0, 4);
@@ -47,7 +47,7 @@ $total_records = number_format($total_records);
         <div class="grey-bg" id="refine-container">
             <h2 class="text-center mt-5" id="refine-heading">Refine your results</h2>
             <div class="center">
-                <form method="POST" action="#">
+                <form method="POST" action="">
                     <fieldset>
                         <legend>Refine by year</legend>
                     <labelfor="dateFrom">From</label>
