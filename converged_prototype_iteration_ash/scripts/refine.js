@@ -10,13 +10,20 @@ refineButton.addEventListener("click", function() {
     if(refine.hidden) {
         refine.hidden = false;
         refineButton.classList.add("tna-button--primary");
-        refineButton.innerText = "Hide options";
-        refine.focus();
+        refineButton.innerText = "Hide filters";
+        window.setTimeout(function ()
+    {
+       const refine_year_from = document.getElementById('dateFrom');
+       const refine_heading = document.getElementById('refine-heading');
+
+       refine_year_from.focus();
+       refine_heading.scrollIntoView();
+    }, 0);
     }
     else {
         refine.hidden = true;
         refineButton.classList.remove("tna-button--primary");
-        refineButton.innerText = "Show options";
+        refineButton.innerText = "Show filters";
 
     }
 

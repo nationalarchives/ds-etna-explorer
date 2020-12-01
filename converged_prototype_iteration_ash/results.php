@@ -40,10 +40,6 @@ if ($start_date_before_refine_POST == null || $end_date_before_refine_POST == nu
 }
 
 
-if ($start_date_before_refine_POST != $start_date || $end_date_before_refine_POST != $end_date) {
-    $refined = true;
-}
-
 $featured_first = $_GET["featured_first"];
 $hide_records_without_image = $_GET["hide_records_without_image"];
 
@@ -59,8 +55,28 @@ if ($hide_records_without_image != null) {
     $hide_records_without_image = true;
 }
 
-$total_records = $eras_data[$era]["total_records"];
-$total_records = number_format($total_records);
+$era_total_records = $eras_data[$era]["total_records"];
+$search_total_records = $era_total_records;
+
+
+if ($hide_records_without_image) {
+    // If they have hidden records without an image, divide the total by two to give the illusion of less records.
+    $search_total_records = ceil($search_total_records / 2);
+}
+
+if ($start_date_before_refine_POST != $start_date || $end_date_before_refine_POST != $end_date) {
+    $refined = true;
+    $search_total_records = ceil($search_total_records / 1.5);
+}
+
+$downloadable_records = ceil($search_total_records * 0.2); // Pretending 20% of records are downloadable in all cases
+$onsite_records = ceil($search_total_records * 0.8); // Pretending 20% of records are only available on site in all cases
+
+
+$era_total_records = number_format($era_total_records);
+$search_total_records = number_format($search_total_records);
+$downloadable_records = number_format($downloadable_records);
+$onsite_records = number_format($onsite_records);
 ?>
 
 <body>
@@ -78,22 +94,21 @@ $total_records = number_format($total_records);
             <div id="at-a-glance">
                 <h2>At a glance</h2>
                 <ul>
+                    <li><?php echo "$era_total_records records exist in this era." ?></li>
+                    <li><?php echo "With the filters selected, $search_total_records of these records are displayed." ?></li>
+                    <li><?php echo "$downloadable_records records are available for download." ?></li>
+                    <li><?php echo " $onsite_records records are available to access for free at our Kew site, or by purchasing a copy." ?></li>
                     <?php foreach ($text_visualisation as $fact) {
                         echo '<li>' . $fact . '</li>';
                     }
-
-                    if ($refined != null) {
-                        echo '<li> Your refined search has produced 1,432 results. </li>';
-                    }
-
                     ?>
 
 
                 </ul>
             </div>
             <div class="options">
-                <h2 class="sr-only">Refine options</h2>
-                <h3 id="options-h3">Options</h3>
+                <h2 class="sr-only">Refine filters</h2>
+                <h3 id="options-h3">Filters</h3>
                 <p>
                     <?php if ($featured_first) {
                         echo "Featured records are set to display first.";
@@ -101,7 +116,7 @@ $total_records = number_format($total_records);
                     <?php if ($hide_records_without_image) {
                         echo "Records without an image have been hidden.";
                     }; ?>
-                    <button class="tna-button" id="refine-button">Show options</button>
+                    <button class="tna-button" id="refine-button">Show filters</button>
 
                 </p>
             </div>
@@ -138,7 +153,7 @@ $total_records = number_format($total_records);
                             <input type="hidden" name="end_date_before_refine_POST" value="<?php echo $end_date ?>" />
 
                             <input type="hidden" name="era" value="<?php echo $era ?>" />
-                            <input type="submit" class="tna-button" value="Refine results">
+                            <input type="submit" class="tna-button" value="Refine results" id="refine-results-button">
 
                         </div>
 
