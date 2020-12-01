@@ -28,8 +28,16 @@ $description = $eras_data[$era]["text"];
 $text_visualisation = $eras_data[$era]["facts"];
 $results = $eras_data[$era]["results"];
 
-$start_date_before_refine_POST = $_GET["previous_start_year"] || $start_date;
-$end_date_before_refine_POST = $_GET["previous_end_year"] || $end_date;
+
+// This is for tracking wether they have changed the years in the "Refine your results box". 
+// If they have changed the years, we limit the amount of records from the array to 5 to give the illusion of less records being returned.
+$start_date_before_refine_POST = $_GET["start_date_before_refine_POST"];
+$end_date_before_refine_POST = $_GET["end_date_before_refine_POST"];
+
+if ($start_date_before_refine_POST == null || $end_date_before_refine_POST == null) {
+    $start_date_before_refine_POST = $start_date;
+    $end_date_before_refine_POST = $end_date;
+}
 
 
 if ($start_date_before_refine_POST != $start_date || $end_date_before_refine_POST != $end_date) {
