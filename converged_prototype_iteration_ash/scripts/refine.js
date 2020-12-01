@@ -10,12 +10,13 @@ refineButton.addEventListener("click", function() {
     if(refine.hidden) {
         refine.hidden = false;
         refineButton.classList.add("tna-button--primary");
-        refineButton.innerText = "Hide refine options";
+        refineButton.innerText = "Hide options";
+        refine.focus();
     }
     else {
         refine.hidden = true;
         refineButton.classList.remove("tna-button--primary");
-        refineButton.innerText = "Show refine options";
+        refineButton.innerText = "Show options";
 
     }
 
