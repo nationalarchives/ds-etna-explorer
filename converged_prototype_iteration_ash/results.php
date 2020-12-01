@@ -28,8 +28,8 @@ $description = $eras_data[$era]["text"];
 $text_visualisation = $eras_data[$era]["facts"];
 $results = $eras_data[$era]["results"];
 
-$start_date_before_refine_POST = $_GET["previous_start_year"];
-$end_date_before_refine_POST = $_GET["previous_end_year"];
+$start_date_before_refine_POST = $_GET["previous_start_year"] || $start_date;
+$end_date_before_refine_POST = $_GET["previous_end_year"] || $end_date;
 
 
 if ($start_date_before_refine_POST != $start_date || $end_date_before_refine_POST != $end_date) {
