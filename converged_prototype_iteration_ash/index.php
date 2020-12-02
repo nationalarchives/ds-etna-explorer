@@ -59,7 +59,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=victorians">Victorians</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1901 - 1918</h4>
+                                        <h4 class="card-subtitle mb-2 text-muted">1850 - 1901</h4>
                                         <p class="card-text">The British Empire, crime, punishment, leisure and advertising are all
                                             brought to life in our resources which are based on records from the second half of Queen
                                             Victoria’s reign.</p>
