@@ -166,9 +166,9 @@ $onsite_records = number_format($onsite_records);
                 $refine_counter = 0;
                 foreach ($results as $result) {
                     echo "<div class='item'>";
-                    echo "<a href='#'>";
+                    echo "<a href='/details_page.php'>";
                     echo "<img src='$result[0]' />";
-                    echo "<h3><a href='#'>$result[1]</a></h3>";
+                    echo "<h3><a href='/details_page.php'>$result[1]</a></h3>";
                     echo "</a>";
                     echo "</div>";
                     if ($refined) {
@@ -182,9 +182,9 @@ $onsite_records = number_format($onsite_records);
                 if ($hide_records_without_image == null) {
                     for ($i = 0; $i < 5; $i++) {
                         echo "<div class='item'>";
-                        echo "<a href='#'>";
+                        echo "<a href='/details_page.php'>";
                         echo "<img src='https://alpha.nationalarchives.gov.uk/collectionexplorer/static/images/image-placeholder-2.png' />";
-                        echo "<h3><a href='#'>Record without image</a></h3>";
+                        echo "<h3><a href='/details_page.php'>Record without image</a></h3>";
                         echo "</a>";
                         echo "</div>";
                     }
