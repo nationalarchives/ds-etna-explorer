@@ -58,20 +58,21 @@ if ($hide_records_without_image != null) {
 $era_total_records = $eras_data[$era]["total_records"];
 $search_total_records = $era_total_records;
 
-
-if ($hide_records_without_image) {
-    // If they have hidden records without an image, divide the total by two to give the illusion of less records.
-    $search_total_records = ceil($search_total_records / 2);
-}
-
 if ($start_date_before_refine_POST != $start_date || $end_date_before_refine_POST != $end_date) {
     $refined = true;
     $search_total_records = ceil($search_total_records / 1.5);
 }
 
-$downloadable_records = ceil($search_total_records * 0.05); // Pretending 20% of records are downloadable in all cases
-$onsite_records = ceil($search_total_records * 0.95); // Pretending 20% of records are only available on site in all cases
 
+if ($hide_records_without_image) {
+    // If they have hidden records without an image, divide the total by two to give the illusion of less records.
+    $search_total_records = ceil($search_total_records * 0.05);
+    $downloadable_records = ceil($search_total_records); // Pretending 20% of records are downloadable in all cases
+    $onsite_records = ceil($search_total_records); // Pretending 20% of records are only available on site in all cases
+} else {
+    $downloadable_records = ceil($search_total_records * 0.05); // Pretending 20% of records are downloadable in all cases
+    $onsite_records = ceil($search_total_records); // Pretending 20% of records are only available on site in all cases
+}
 
 $era_total_records = number_format($era_total_records);
 $search_total_records = number_format($search_total_records);
@@ -96,8 +97,15 @@ $onsite_records = number_format($onsite_records);
                 <ul>
                     <li><?php echo "$era_total_records records exist in this era." ?></li>
                     <li><?php echo "With the filters selected, $search_total_records of these records are displayed." ?></li>
-                    <li><?php echo "$downloadable_records records are available for download." ?></li>
-                    <li><?php echo " $onsite_records records are available to access for free at our Kew site, or by purchasing a copy." ?></li>
+                    <li><?php
+                        if ($hide_records_without_image) {
+                            echo "All";
+                        } else {
+                            echo $downloadable_records;
+                        }
+
+                        echo " records displayed are available for download."; ?></li>
+                    <li><?php echo "All $search_total_records records are available to access for free at our Kew site, or by purchasing a copy." ?></li>
                     <?php foreach ($text_visualisation as $fact) {
                         echo '<li>' . $fact . '</li>';
                     }
