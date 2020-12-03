@@ -69,8 +69,8 @@ if ($start_date_before_refine_POST != $start_date || $end_date_before_refine_POS
     $search_total_records = ceil($search_total_records / 1.5);
 }
 
-$downloadable_records = ceil($search_total_records * 0.2); // Pretending 20% of records are downloadable in all cases
-$onsite_records = ceil($search_total_records * 0.8); // Pretending 20% of records are only available on site in all cases
+$downloadable_records = ceil($search_total_records * 0.05); // Pretending 20% of records are downloadable in all cases
+$onsite_records = ceil($search_total_records * 0.95); // Pretending 20% of records are only available on site in all cases
 
 
 $era_total_records = number_format($era_total_records);
