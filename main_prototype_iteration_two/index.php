@@ -1,6 +1,27 @@
 <!doctype html>
 <html lang="en">
 <?php include 'includes/head.php' ?>
+<?php
+
+function render_card($era)
+{
+    include 'data/era_data.php';
+
+    $description = $era_descriptions[$era]; // from include
+    $time_period = $era_time_periods[$era]; // from include
+    $h3_era_text = ucfirst($era);
+    echo "<div class='col-lg-6'>
+    <div class='card'>
+        <div class='card-body'>
+            <h3 class='card-title'><a href='/results.php?featured_first=true&hide_records_without_image=true&era=$era'>$h3_era_text</a></h3>
+            <h4 class='card-subtitle mb-2 text-muted'>$time_period</h4>
+            <p class='card-text'>$description</p>
+        </div>
+    </div>
+</div>";
+}
+
+?>
 
 <body>
     <?php include 'includes/css_js_toggler.php' ?>
@@ -22,93 +43,16 @@
                         <p>Our experts have identified eight consecutive time periods, from medieval to postwar,
                             covering the full collection:</p>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=medieval">Medieval</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">974 - 1485</h4>
-                                        <p class="card-text">William the Conqueror’s Domesday survey aimed to put every inch of his new
-                                            kingdom on paper. But Anglo-Saxon and Medieval England can also be found in the Magna Carta
-                                            and other treaties, charters, letters and financial records.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=early-modern">Early modern</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1485 - 1750</h4>
-                                        <p class="card-text">Follow the complex manoeuvres, plots and double dealings of the Tudor and
-                                            Stuart courts and the Jacobite risings of 1715 and 1745, through our records in this period
-                                            dominated by religious conflict and conspiracy.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=empire-and-industry">Empire and Industry</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1750 - 1850</h4>
-                                        <p class="card-text">Find out about the impact of the Industrial Revolution and how living and
-                                            working conditions changed for many in Britain. Political protest and crime and punishment
-                                            are key themes in our resources for this period.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=victorians">Victorians</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1850 - 1901</h4>
-                                        <p class="card-text">The British Empire, crime, punishment, leisure and advertising are all
-                                            brought to life in our resources which are based on records from the second half of Queen
-                                            Victoria’s reign.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=early-20th-century">Early 20th Century</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1901 - 1918</h4>
-                                        <p class="card-text">Read original documents relating to Suffragettes, the Russian Revolution
-                                            and the First World War. Cabinet papers, battle plans, maps and unit war diaries chronicle
-                                            the conflict between Europe’s great powers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=interwar">Interwar</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1918 - 1939</h4>
-                                        <p class="card-text">Study records relating to the rise of dictators, the failure of
-                                            international diplomacy and Britain’s preparations for the Second World War. Discover more
-                                            about life in 1930s Britain including unemployment, slum clearance and leisure.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=second-world-war">Second World War</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1939 - 1945</h4>
-                                        <p class="card-text">Our records cover the history of the Second World War including the roles
-                                            of Churchill, Roosevelt and Stalin. Find out more about the Holocaust and life on the Home
-                                            Front.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="/results.php?featured_first=true&hide_records_without_image=true&era=postwar">Postwar</a></h3>
-                                        <h4 class="card-subtitle mb-2 text-muted">1945 - 2020</h4>
-                                        <p class="card-text">Discover Cold War reports from behind the Iron Curtain, find out what it
-                                            was like to live in Attlee’s Britain or explore documents on Indian Partition.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            render_card("medieval");
+                            render_card("early-modern");
+                            render_card("empire-and-industry");
+                            render_card("victorians");
+                            render_card("early-20th-century");
+                            render_card("interwar");
+                            render_card("second-world-war");
+                            render_card("postwar");
+                            ?>
                         </div>
                         <h3>Choose your own dates</h3>
                         <p>Select your own date ranges to explore the collection:</p>
