@@ -28,7 +28,7 @@ function render_card($era)
     <div class="tna-page home">
         <div class="container">
             <div class="row">
-                <main class="col-xs-12 col-sm-8" role="main">
+                <main class="col-xs-12 col-sm-12" role="main">
                     <a href="/" id="logo-link"><img src="/images/tna-square-logo.svg" id="logo" alt="The National Archives Square Logo" /></a>
                     <article>
                         <div class="tna-page__header">
