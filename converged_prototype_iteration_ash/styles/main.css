@@ -1,0 +1,154 @@
+img {
+    max-width: 100%!important;
+}
+
+figure {
+
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.home .tna-form fieldset {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-period input {
+    max-width: 100%!important;
+    min-width: auto!important;
+}
+
+li:not(:first-child) a:hover {
+    cursor: not-allowed;
+}
+
+.meta {
+    padding: 1em;
+    background-color: cornsilk;
+}
+
+/* .card {
+    background-color: #eee;
+    padding: 24px;
+    margin-top: 14px;
+} */
+
+.tna-button {
+    text-decoration: none;
+}
+
+.tna-button:hover {
+    outline: 0;
+}
+
+a, a:visited {
+    color: #134571;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #134571;
+    outline: 1px solid #134571;
+}
+
+.grey-bg {
+    background-color: #eee;
+    padding: 7px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#refine-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#disabled-button {
+    cursor: not-allowed;
+}
+
+#refine-container {
+    margin-bottom: 14px;
+}
+
+#records-available {
+    padding: 14px;
+    display: inline-block;
+}
+
+a:hover img {
+    outline: 5px solid #134571;
+}
+
+a:focus, a:focus:hover {
+    outline: #1d70b8 solid 5px !important;
+    outline-offset: 0 !important;
+    z-index: 999 !important;
+    background-color: #fff !important;
+    color: #26262a !important; }
+  
+  button:focus, input:focus {
+    outline: #1d70b8 solid 5px !important;
+    outline-offset: 0 !important;
+    z-index: 999 !important; }
+
+
+input[type="checkbox"] + label, input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#at-a-glance {
+    background-color: #eee;
+    padding: 24px;
+    margin-bottom: 14px;
+}
+
+#at-a-glance h3 {
+    padding-left: 24px;
+}
+
+.home .tna-form fieldset {
+    display: block;
+}
+
+#logo {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.options {
+    padding: 7px;
+    background-color: #eee;
+    margin-bottom: 14px;
+}
+
+.options p {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+#refine-button {
+    display: none;
+    margin-top: 7px;
+    padding: 3px;
+}
+
+#logo-link:hover {
+    outline: 0;
+    background-color: transparent;
+}
+
+#options-h3 {
+    margin-top: 7px;
+    margin-left: 14px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+}

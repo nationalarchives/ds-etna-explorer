@@ -1,0 +1,155 @@
+.css .tna-button {
+    background-color: #26262a;
+    color: #fff;
+    border: 2px solid #26262a;
+    padding: 0.5em 0.9em;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.css .tna-button:hover {
+    background-color: #fff;
+    color: #26262a;
+    text-decoration: none;
+}
+.css a.tna-button{
+    margin-right: 1em;
+}
+.css .masonry h3 {
+    font-size: 1.2em;
+}
+.css .image-placeholder {
+    background-color: #ddd;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em !important;
+}
+
+.css .masonry { /* Masonry container */
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+.css .item {
+    display: inline-block;
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1em;
+    width: 100%;
+    -webkit-transition:0.5s ease all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    background-color: #efefef;
+}
+.css .item img{
+    width:100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+.css form {
+    margin-bottom: 3em;
+}
+.css fieldset {
+    margin-bottom: 1em;
+}
+.css .form-section-title {
+    margin-bottom: 1em;
+}
+.css .filter {
+    margin-right: 1em;
+}
+.css .form-section-title span {
+    font-size: 24px;
+}
+.css .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+
+.css .showcase {
+    margin-top: 2em;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    background: #eee;
+    padding: 0.5em 3em 1em;
+}
+.css .center {
+    margin: 0 auto;
+    display: block;
+    width: 500px;
+}
+.css .refine-results-form {
+    margin-bottom: 2em;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    background: #eee;
+    padding: 0.5em 3em 1em;
+}
+.css .refine-results-form .tna-button {
+    margin: 0;
+}
+.css .refine-results-form .tna-form {
+    margin: 0;
+}
+
+.css .tna-form-row {
+    width: 100%;
+    max-width: 480px;
+    min-width: 220px;
+    border: 2px solid #26262a;
+    padding: 8px;
+    text-indent: 5px;
+}
+
+.css #text-visualisation{
+    background-color: #ececec;
+    padding: 24px;
+    margin-bottom: 2em;
+}
+.css #text-visualisation h3{
+    padding-left: 24px;
+}
+.css #text-visualisation ul{
+    margin-bottom: 0;
+}
+@media only screen and (min-width: 768px){
+    .css .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .css .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .css .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
