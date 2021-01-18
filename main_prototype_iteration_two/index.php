@@ -3,7 +3,7 @@
 <?php include 'includes/head.php' ?>
 
 <body>
-    <a href="<?php echo "/toggle.php?redirect=" . $_SERVER['REQUEST_URI'] ?>">Toggle CSS & JS</a>
+    <?php include 'includes/css_js_toggler.php' ?>
     <div class="tna-page home">
         <div class="container">
             <div class="row">
