@@ -1,4 +1,9 @@
 <?php
+
+$era_summary = "From The Domesday Book to recent Cabinet papers, 1,000 years of international history are
+preserved in millions of records. Explore wars, revolutions, life stories and landmark
+rulings, and iconic figures including Shakespeare, Queen Victoria, Gandhi and Churchill.";
+
 $era_descriptions = [
 
     "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new
