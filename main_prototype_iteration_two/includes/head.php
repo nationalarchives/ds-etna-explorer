@@ -6,8 +6,8 @@
 
       <?php
 
-      if (!isset($_COOKIE['disabled_enhancements'])) {
-            $_COOKIE['disabled_enhancements'] = "false";
+      if (!isset($_COOKIE['disable_enhancements'])) {
+            $_COOKIE['disable_enhancements'] = "false";
       }
 
       if ($_COOKIE["disable_enhancements"] != "true") {
