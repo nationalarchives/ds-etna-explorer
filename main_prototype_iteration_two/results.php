@@ -3,11 +3,25 @@
 <?php
 include_once 'includes/head.php';
 include_once 'includes/functions.php';
+include_once 'data/era_data.php';
+
 ?>
 
 <?php
 
 $era = $_GET["era"];
+$start_date = $_GET["start_date"] ?? $era_time_periods[$era][0];
+$end_date = $_GET["end_date"] ?? $era_time_periods[$era][1];
+
+echo "<pre>";
+var_dump($start_date);
+echo "</pre>";
+
+echo "<pre>";
+var_dump($end_date);
+echo "</pre>";
+
+
 
 if (!isset($era)) {
     header('Location: index.php');
@@ -30,7 +44,7 @@ $title = prettify_era($era);
         <div class="container">
             <a href="/" id="logo-link"><img src="/images/tna-square-logo.svg" id="logo" alt="The National Archives Square Logo" /></a>
             <p><a href="/">Home</a></p>
-            <h1><?php echo "$title (0000-0000)"; ?></h1>
+            <h1><?php echo "$title ($start_date-$end_date)"; ?></h1>
 
             <div class="masonry">
                 <h2 id="results" class="sr-only">Results</h2>

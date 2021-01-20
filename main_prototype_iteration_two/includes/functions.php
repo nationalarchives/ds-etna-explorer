@@ -7,16 +7,18 @@ function render_card($era)
     $description = $era_descriptions[$era]; // from include
     $time_period = $era_time_periods[$era]; // from include
     $h3_era_text = prettify_era($era);
-    echo "<div class='col-lg-6'>
+    echo <<<HTML
+    <div class='col-lg-6'>
     <div class='card'>
         <div class='card-body'>
-        <div class='era-image'><a href='/results.php?featured_first=true&hide_records_without_image=true&era=$era'><img src='images/$era.jpg' /></a></div>
-            <h3 class='card-title'><a href='/results.php?featured_first=true&hide_records_without_image=true&era=$era'>$h3_era_text</a></h3>
-            <p class='card-subtitle mb-2 text-muted'>$time_period</p>
+        <div class='era-image'><a href='/results.php?era=$era'><img src='images/$era.jpg' /></a></div>
+            <h3 class='card-title'><a href='/results.php?era=$era'>$h3_era_text</a></h3>
+            <p class='card-subtitle mb-2 text-muted'>$time_period[0] - $time_period[1]</p>
             <p class='card-text'>$description</p>
         </div>
     </div>
-</div>";
+</div>
+HTML;
 }
 
 function get_data_from_api($url)

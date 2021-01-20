@@ -20,12 +20,19 @@ $era_descriptions = [
 ];
 
 $era_time_periods = [
-    "medieval" => "974 - 1485",
-    "early-modern" => "1485 - 1750",
-    "empire-and-industry" => "1750 - 1850",
-    "victorians" => "1850 - 1901",
-    "early-20th-century" => "1901 - 1918",
-    "interwar" => "1918 - 1939",
-    "second-world-war" => "1939 - 1945",
-    "postwar" => "1945 - 2020"
+    "medieval" => [974, 1485],
+    "early-modern" => [1485, 1750],
+    "empire-and-industry" => [1750, 1850],
+    "victorians" => [1850, 1901],
+    "early-20th-century" => [1901, 1918],
+    "interwar" => [1918, 1939],
+    "second-world-war" => [1939, 1945],
+    "postwar" => [1945, 2020]
 ];
+
+$homepage_heading = "Explore the digitised collection through time";
+$homepage_intro_1 = "We hold [x] items in our archive, They document wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
+$homepage_intro_2 = "[x] of these are digitised - this means they are available to view online and download.";
+
+$homepage_subheading = "Explore by time period";
+$homepage_subparagraph = "Our experts have identified eight consecutive time periods, from medieval to postwar, covering the full collection:";
