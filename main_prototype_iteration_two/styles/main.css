@@ -24,10 +24,6 @@ a {
   min-width: auto !important;
 }
 
-li:not(:first-child) a:hover {
-  cursor: not-allowed;
-}
-
 .meta {
   padding: 1em;
   background-color: cornsilk;
@@ -167,4 +163,39 @@ input[type="checkbox"] {
 
 .card-subtitle {
   font-weight: bold;
+}
+
+#subjects ul {
+  padding-left: 0;
+}
+
+#subjects li {
+  display: inline-block;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 7px;
+}
+
+#subjects li a {
+  padding: 7px;
+  background-color: #26262a;
+  color: #fff;
+  border: 2px solid #26262a;
+  text-decoration: none;
+}
+
+#subjects li a:hover,
+#subjects li a.selected {
+  outline: 0;
+  background-color: #fff;
+  color: #26262a;
+}
+
+#subject-refine-h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#refine-results-button {
+  padding: 3px;
 }
