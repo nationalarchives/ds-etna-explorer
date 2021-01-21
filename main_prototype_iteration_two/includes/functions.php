@@ -61,9 +61,10 @@ function render_result($result)
         }
     }
 
-    // If the image doesn't exist, or the image link isn't actually a raw image (API sometimes returns image library links) then return without rendering the result
+    // If the image doesn't exist, or the image link isn't actually a raw image (API sometimes returns image library links) then display placeholder or return the function
     if (!$image || !(str_contains($image, ".jpg") || str_contains($image, ".png") || str_contains($image, ".jpeg"))) {
-        return;
+        $image = "/images/placeholder" . rand(0,3) . ".png";
+        // return; Comment the above line, and uncomment this line to hide non-digitised records
     }
 
     $title = $source["title"];
@@ -112,6 +113,6 @@ function render_subject($subject)
     }
 
     echo <<<HTML
-    <li><a class="$class" href="/results.php?$query_string_for_this_subject">$subject_name</a></li>
+    <li><a class="$class" href="/results.php?$query_string_for_this_subject#results">$subject_name</a></li>
     HTML;
 }

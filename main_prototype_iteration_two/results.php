@@ -32,6 +32,22 @@ if (!isset($era)) {
 
 $api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/?no_of_hits=20&era=$era&start_year=$start_date&end_year=$end_date&subject=$current_subject";
 $search_results = get_data_from_api($api_url);
+
+$total = $search_results["filtered_total"];
+$total_fake_digitised = round($total * 0.05); // Give illusion of only showing 5% of our collection as digitised
+$hits = $search_results["hits"];
+
+usort($hits, function ($a, $b) { //Sort the array using a user defined function
+    return $a["_source"]["first_date"] < $b["_source"]["first_date"] ? -1 : 1; //Compare the scores
+});
+
+echo "<pre>";
+foreach ($hits as $hit) {
+    echo $hit["_source"]["first_date"] . "<br/>";
+    # code...
+}
+echo "</pre>";
+
 echo $api_url;
 
 
@@ -52,46 +68,48 @@ $title = prettify_text($era);
             <h1><?php echo "$title ($start_date-$end_date)"; ?></h1>
             <h2 id="subject-refine-h2">Refine by subject</h2>
 
-<div id="subjects">
-<ul>
-    <?php if($current_subject): 
+            <div id="subjects">
+                <ul>
+                    <?php if ($current_subject) :
 
-    $url_with_subject_removed = str_replace("&subject=$current_subject", "&subject=", $_SERVER['QUERY_STRING']);
-    echo "<li><a href='/results.php?$url_with_subject_removed'>None</a></li>";
-        
-    endif; ?>
+                        $url_with_subject_removed = str_replace("&subject=$current_subject", "&subject=", $_SERVER['QUERY_STRING']);
+                        echo "<li><a href='/results.php?$url_with_subject_removed#results'>None</a></li>";
 
-    <?php foreach ($search_results["subjects_aggregation"] as $subject) : ?>
+                    endif; ?>
 
-
-
-        <?php render_subject($subject); ?>
-    <?php
-    endforeach;
-    ?>
-</ul>
-</div>
-<form method="GET" action="#results">
-        <fieldset>
-            <legend>Refine by year</legend>
-            <labelfor="dateFrom">From</label>
-                <input type="number" name="start_date" min=<?php echo $era_time_period_min ?> max=<?php echo $era_time_period_max ?> id="dateFrom" placeholder=<?php echo $start_date ?> value=<?php echo $start_date ?>>
-
-                <label for="dateTo">To</label>
-                <input type="number" name="end_date" min=<?php echo $era_time_period_min ?> max=<?php echo $era_time_period_max ?> id="dateTo" placeholder=<?php echo $end_date ?> value=<?php echo $end_date ?>>
-                <input type="hidden" name="subject" value="<?php echo $current_subject ?>" />
-            <input type="hidden" name="era" value="<?php echo $era ?>" />
-            <input type="submit" class="tna-button" value="Refine years" id="refine-results-button">
-        </fieldset>
+                    <?php foreach ($search_results["subjects_aggregation"] as $subject) : ?>
 
 
-    </form>
+
+                        <?php render_subject($subject); ?>
+                    <?php
+                    endforeach;
+                    ?>
+                </ul>
+            </div>
+            <form method="GET" action="#results">
+                <fieldset>
+                    <legend>Refine by year</legend>
+                    <labelfor="dateFrom">From</label>
+                        <input type="number" name="start_date" min=<?php echo $era_time_period_min ?> max=<?php echo $era_time_period_max ?> id="dateFrom" placeholder=<?php echo $start_date ?> value=<?php echo $start_date ?>>
+
+                        <label for="dateTo">To</label>
+                        <input type="number" name="end_date" min=<?php echo $era_time_period_min ?> max=<?php echo $era_time_period_max ?> id="dateTo" placeholder=<?php echo $end_date ?> value=<?php echo $end_date ?>>
+                        <input type="hidden" name="subject" value="<?php echo $current_subject ?>" />
+                        <input type="hidden" name="era" value="<?php echo $era ?>" />
+                        <input type="submit" class="tna-button" value="Refine years" id="refine-results-button">
+                </fieldset>
+
+
+            </form>
+            <h2 id="results" class="sr-only">Results</h2>
+            <p id="records-available"><?php echo "$total_fake_digitised digitised records available"; ?>
             <div class="masonry">
-                <h2 id="results" class="sr-only">Results</h2>
-                <?php foreach ($search_results["hits"] as  $result) : ?>
-                    <?php render_result($result) ?>
-                <?php endforeach; ?>
-                <!-- Results go here -->
+                
+                    <?php foreach ($hits as  $result) : ?>
+                        <?php render_result($result) ?>
+                    <?php endforeach; ?>
+                    <!-- Results go here -->
             </div>
         </div>
     </main>

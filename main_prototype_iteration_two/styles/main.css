@@ -79,8 +79,8 @@ legend {
 }
 
 #records-available {
-  padding: 14px;
-  display: inline-block;
+  padding-bottom: 14px;
+  display: block;
 }
 
 a:hover img {
