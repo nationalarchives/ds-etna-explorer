@@ -42,7 +42,7 @@ $era_time_periods = [
 ];
 
 $homepage_heading = "Explore the digitised collection through time";
-$homepage_intro_1 = "<strong>We hold 845,941 items in our archive</strong>. They document wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
+$homepage_intro_1 = "<strong>We hold 8,998,554 items in our archive</strong>. They document wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
 $homepage_intro_2 = "<strong>433,816 of these are digitised</strong> - this means they are available to view online and download.";
 
 $homepage_subheading = "Explore by time period";
