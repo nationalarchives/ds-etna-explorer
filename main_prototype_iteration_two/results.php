@@ -19,6 +19,8 @@ $era_time_period_max = $era_time_periods[$era][1];
 $start_date = $_GET["start_date"] ?? $era_time_periods[$era][0];
 $end_date = $_GET["end_date"] ?? $era_time_periods[$era][1];
 
+
+// If the year is only 3 characters long, pad with 0's as the search API needs 4 length integers for year.
 if (strlen($start_date) < 4) {
     $start_date = str_pad($start_date, 4, "0", STR_PAD_LEFT);
 }
@@ -34,19 +36,12 @@ $api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/
 $search_results = get_data_from_api($api_url);
 
 $total = $search_results["filtered_total"];
-$total_fake_digitised = round($total * 0.05); // Give illusion of only showing 5% of our collection as digitised
+$total_fake_digitised = number_format(round($total * 0.05)); // Give illusion of only showing 5% of our collection as digitised
 $hits = $search_results["hits"];
 
 usort($hits, function ($a, $b) { //Sort the array using a user defined function
     return $a["_source"]["first_date"] < $b["_source"]["first_date"] ? -1 : 1; //Compare the scores
 });
-
-echo "<pre>";
-foreach ($hits as $hit) {
-    echo $hit["_source"]["first_date"] . "<br/>";
-    # code...
-}
-echo "</pre>";
 
 echo $api_url;
 
@@ -105,11 +100,11 @@ $title = prettify_text($era);
             <h2 id="results" class="sr-only">Results</h2>
             <p id="records-available"><?php echo "$total_fake_digitised digitised records available"; ?>
             <div class="masonry">
-                
-                    <?php foreach ($hits as  $result) : ?>
-                        <?php render_result($result) ?>
-                    <?php endforeach; ?>
-                    <!-- Results go here -->
+
+                <?php foreach ($hits as  $result) : ?>
+                    <?php render_result($result) ?>
+                <?php endforeach; ?>
+                <!-- Results go here -->
             </div>
         </div>
     </main>

@@ -6,6 +6,7 @@ function render_card($era)
 
     $description = $era_descriptions[$era]; // from include
     $time_period = $era_time_periods[$era]; // from include
+    $records_count = number_format($era_records_count[$era]);
     $h3_era_text = prettify_text($era);
     echo <<<HTML
     <div class='col-lg-6'>
@@ -14,6 +15,8 @@ function render_card($era)
         <div class='era-image'><a href='/results.php?era=$era'><img src='images/$era.jpg' /></a></div>
             <h3 class='card-title'><a href='/results.php?era=$era'>$h3_era_text</a></h3>
             <p class='card-subtitle mb-2 text-muted'>$time_period[0] - $time_period[1]</p>
+            <p class='card-subtitle mb-2 text-muted'>$records_count digitised records available</p>
+
             <p class='card-text'>$description</p>
         </div>
     </div>
@@ -63,7 +66,7 @@ function render_result($result)
 
     // If the image doesn't exist, or the image link isn't actually a raw image (API sometimes returns image library links) then display placeholder or return the function
     if (!$image || !(str_contains($image, ".jpg") || str_contains($image, ".png") || str_contains($image, ".jpeg"))) {
-        $image = "/images/placeholder" . rand(0,3) . ".png";
+        $image = "/images/placeholder" . rand(0, 3) . ".png";
         // return; Comment the above line, and uncomment this line to hide non-digitised records
     }
 
@@ -96,20 +99,19 @@ function render_subject($subject)
     $current_subject = '';
     $class = '';
 
-    if(isset($_GET["subject"])) {
+    if (isset($_GET["subject"])) {
         $current_subject = $_GET['subject'];
     }
 
-    if(str_contains($_SERVER['QUERY_STRING'], "&subject=")) {
+    if (str_contains($_SERVER['QUERY_STRING'], "&subject=")) {
         $query_string_for_this_subject = str_replace("&subject=$current_subject", "&subject=$subject_key", $_SERVER['QUERY_STRING']);
-    }
-    else {
+    } else {
         $query_string_for_this_subject = $_SERVER['QUERY_STRING'] . "&subject=$subject_key";
     }
 
 
-    if($current_subject === $subject_key) {
-        $class= "selected";
+    if ($current_subject === $subject_key) {
+        $class = "selected";
     }
 
     echo <<<HTML

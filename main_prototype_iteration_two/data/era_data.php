@@ -19,6 +19,17 @@ $era_descriptions = [
 
 ];
 
+$era_records_count = [
+    "medieval" => 6672,
+    "early-modern" => 54950,
+    "empire-and-industry" => 23853,
+    "victorians" => 37659,
+    "early-20th-century" => 56260,
+    "interwar" => 66117,
+    "second-world-war" => 49099,
+    "postwar" => 139206
+];
+
 $era_time_periods = [
     "medieval" => [974, 1485],
     "early-modern" => [1485, 1750],
@@ -31,8 +42,8 @@ $era_time_periods = [
 ];
 
 $homepage_heading = "Explore the digitised collection through time";
-$homepage_intro_1 = "We hold [x] items in our archive, They document wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
-$homepage_intro_2 = "[x] of these are digitised - this means they are available to view online and download.";
+$homepage_intro_1 = "<strong>We hold 845,941 items in our archive</strong>. They document wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
+$homepage_intro_2 = "<strong>433,816 of these are digitised</strong> - this means they are available to view online and download.";
 
 $homepage_subheading = "Explore by time period";
 $homepage_subparagraph = "Our experts have identified eight consecutive time periods, from medieval to postwar, covering the full collection:";
