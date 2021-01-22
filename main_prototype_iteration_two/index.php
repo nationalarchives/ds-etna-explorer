@@ -18,11 +18,9 @@ include_once 'data/era_data.php';
                             <h1><?php echo $homepage_heading ?></h1>
                         </div>
                         <div class="tna-page__entry">
-                            <p><?php echo $homepage_intro_1 ?></p>
                             <p><?php echo $homepage_intro_2 ?></p>
+                            <p><?php echo $homepage_subparagraph ?></p>
                         </div>
-                        <h2><?php echo $homepage_subheading ?></h2>
-                        <p><?php echo $homepage_subparagraph ?></p>
                         <div class="row">
                             <?php
                             render_card("medieval");
