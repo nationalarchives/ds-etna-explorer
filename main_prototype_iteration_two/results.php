@@ -100,7 +100,7 @@ $title = prettify_text($era);
             </form>
             <h2 id="results" class="sr-only">Results</h2>
             <p id="records-available"><?php echo "$total_fake_digitised digitised records available"; ?>
-            <div class="masonry">
+            <div class="masonry-with-columns">
 
                 <?php foreach ($hits as  $result) : ?>
                     <?php render_result($result) ?>

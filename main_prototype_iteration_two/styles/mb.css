@@ -31,7 +31,8 @@ h4 {
 a {
   color: #1d70b8;
 }
-.masonry h3 {
+.masonry h3,
+.masonry-with-columns h3 {
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -48,15 +49,27 @@ a {
 
 .masonry {
   /* Masonry container */
-  -moz-column-count: 1;
-  -webkit-column-count: 1;
-  column-count: 1;
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+  column-count: 4;
   padding: 0;
   -moz-column-gap: 1.5em;
   -webkit-column-gap: 1.5em;
   column-gap: 4.5em;
   font-size: 0.85em;
 }
+
+.masonry-with-columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 25px;
+}
+
+.masonry-with-columns .item {
+  flex: 4 4 20%;
+}
+
 .item {
   display: inline-block;
   background: #fff;
