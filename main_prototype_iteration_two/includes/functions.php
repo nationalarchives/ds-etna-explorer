@@ -118,3 +118,47 @@ function render_subject($subject)
     <li><a class="$class" href="/results.php?$query_string_for_this_subject#results">$subject_name</a></li>
     HTML;
 }
+
+function replace_or_add_to_query($query_string, $query_to_find, $query_to_replace, $new_query)
+{
+    if (str_contains($query_string, $query_to_find)) {
+        $query_string = str_replace($query_to_replace, $new_query, $query_string);
+    } else {
+        $query_string = $query_string . $new_query;
+    }
+
+    return $query_string;
+}
+
+function render_subperiod($subperiod)
+{
+    $subperiod_key = $subperiod[0];
+    $subperiod_start_year = $subperiod[1];
+    $subperiod_end_year = $subperiod[2];
+
+
+    $subperiod_name = prettify_text($subperiod_key) . " ($subperiod_start_year - $subperiod_end_year)";
+    $current_subperiod = '';
+    $class = '';
+    $query_string = $_SERVER['QUERY_STRING'];
+
+    $current_subperiod = $_GET['subperiod'] ?? '';
+    $current_start_year = $_GET['start_date'] ?? '';
+    $current_end_year = $_GET['end_date'] ?? '';
+
+
+    $query_string = replace_or_add_to_query($query_string, "&subperiod=$current_subperiod", "&subperiod=$current_subperiod", "&subperiod=$subperiod_key");
+
+    $query_string = replace_or_add_to_query($query_string, "&start_date=", "&start_date=$current_start_year", "&start_date=$subperiod_start_year");
+
+    $query_string = replace_or_add_to_query($query_string, "&end_date=", "&end_date=$current_end_year", "&end_date=$subperiod_end_year");
+
+
+    if ($current_subperiod === $subperiod_key) {
+        $class = "selected";
+    }
+
+    echo <<<HTML
+    <li><a class="$class" href="/results.php?$query_string#results">$subperiod_name</a></li>
+    HTML;
+}

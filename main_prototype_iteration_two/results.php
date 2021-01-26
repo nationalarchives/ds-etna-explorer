@@ -11,13 +11,20 @@ include_once 'data/era_data.php';
 
 $era = $_GET["era"];
 $current_subject = $_GET["subject"] ?? '';
+$current_subperiod = $_GET["subperiod"] ?? '';
+
 
 $era_time_period_min = $era_time_periods[$era][0];
 $era_time_period_max = $era_time_periods[$era][1];
 
 
-$start_date = $_GET["start_date"] ?? $era_time_periods[$era][0];
-$end_date = $_GET["end_date"] ?? $era_time_periods[$era][1];
+$start_date = $_GET["start_date"] ?? '';
+$end_date = $_GET["end_date"] ?? '';
+
+if ($start_date === null || $start_date === '') {
+    $start_date = $era_time_periods[$era][0];
+    $end_date = $era_time_periods[$era][1];
+}
 
 
 // If the year is only 3 characters long, pad with 0's as the search API needs 4 length integers for year.
@@ -62,45 +69,43 @@ $title = prettify_text($era);
             <p><a href="/">Home</a></p>
             <h1><?php echo "$title ($start_date-$end_date)"; ?></h1>
             <p><?php echo $era_descriptions[$era] ?></p>
-            <h2 id="subject-refine-h2">Refine by subject</h2>
+            <?php if (!empty($era_subperiods[$era])) : ?>
+                <h2>Refine by sub period</h2>
+
+            <?php endif; ?>
 
             <div id="subjects">
                 <ul>
-                    <?php if ($current_subject) :
+                    <?php if ($current_subperiod) :
 
-                        $url_with_subject_removed = str_replace("&subject=$current_subject", "&subject=", $_SERVER['QUERY_STRING']);
-                        echo "<li><a href='/results.php?$url_with_subject_removed#results'>None</a></li>";
+                        $url_with_subperiod_removed = str_replace("&subperiod=$current_subperiod", "&subperiod=", $_SERVER['QUERY_STRING']);
+                        $url_with_subperiod_removed = str_replace("&start_date=$start_date", "&start_date=", $url_with_subperiod_removed);
+                        $url_with_subperiod_removed = str_replace("&end_date=$end_date", "&end_date=", $url_with_subperiod_removed);
+
+
+                        echo "<li><a href='/results.php?$url_with_subperiod_removed#results'>None</a></li>";
 
                     endif; ?>
 
-                    <?php foreach ($search_results["subjects_aggregation"] as $subject) : ?>
-
-
-
-                        <?php render_subject($subject); ?>
                     <?php
-                    endforeach;
+
+                    if (!empty($era_subperiods[$era])) :
+
+                        foreach ($era_subperiods[$era] as $subperiod) : ?>
+
+
+
+                            <?php render_subperiod($subperiod); ?>
+                    <?php
+                        endforeach;
+                    endif;
                     ?>
                 </ul>
             </div>
-            <form method="GET" action="#results">
-                <fieldset>
-                    <legend>Refine by year</legend>
-                    <labelfor="dateFrom">From</label>
-                        <input type="number" name="start_date" min=<?php echo $era_time_period_min ?> max=<?php echo $era_time_period_max ?> id="dateFrom" placeholder=<?php echo $start_date ?> value=<?php echo $start_date ?>>
 
-                        <label for="dateTo">To</label>
-                        <input type="number" name="end_date" min=<?php echo $era_time_period_min ?> max=<?php echo $era_time_period_max ?> id="dateTo" placeholder=<?php echo $end_date ?> value=<?php echo $end_date ?>>
-                        <input type="hidden" name="subject" value="<?php echo $current_subject ?>" />
-                        <input type="hidden" name="era" value="<?php echo $era ?>" />
-                        <input type="submit" class="tna-button" value="Refine years" id="refine-results-button">
-                </fieldset>
-
-
-            </form>
             <h2 id="results" class="sr-only">Results</h2>
             <p id="records-available"><?php echo "$total_fake_digitised digitised records available"; ?>
-            <div class="masonry-with-columns">
+            <div class="masonry">
 
                 <?php foreach ($hits as  $result) : ?>
                     <?php render_result($result) ?>

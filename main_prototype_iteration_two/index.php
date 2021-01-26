@@ -16,10 +16,10 @@ include_once 'data/era_data.php';
                     <article>
                         <div class="tna-page__header">
                             <h1><?php echo $homepage_heading ?></h1>
+                            <p><?php echo $homepage_intro_1 ?></p>
                         </div>
                         <div class="tna-page__entry">
                             <p><?php echo $homepage_intro_2 ?></p>
-                            <p><?php echo $homepage_subparagraph ?></p>
                         </div>
                         <div class="row">
                             <?php
