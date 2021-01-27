@@ -6,16 +6,14 @@ rulings, and iconic figures including Shakespeare, Queen Victoria, Gandhi and Ch
 
 $era_descriptions = [
 
-    "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new
-    kingdom on paper. But Anglo-Saxon and Medieval England can also be found in the Magna Carta
-    and other treaties, charters, letters and financial records.",
-    "early-modern" => "Follow the complex manoeuvres, plots and double dealings of the Tudor and Stuart courts and the Jacobite risings of 1715 and 1745, through our records in this period dominated by religious conflict and conspiracy.",
-    "empire-and-industry" => "Find out about the impact of the Industrial Revolution and how living and working conditions changed for many in Britain. Political protest and crime and punishment are key themes in our resources for this period.",
-    "victorians" => "The British Empire, crime, punishment, leisure and advertising are all brought to life in our resources which are based on records from the second half of Queen Victoria’s reign.",
-    "early-20th-century" => "Read original documents relating to Suffragettes, the Russian Revolution and the First World War. Cabinet papers, battle plans, maps and unit war diaries chronicle the conflict between Europe’s great powers.",
-    "interwar" => "Study records relating to the rise of dictators, the failure of international diplomacy and Britain’s preparations for the Second World War. Discover more about life in 1930s Britain including unemployment, slum clearance and leisure.",
-    "second-world-war" => "Our records cover the history of the Second World War including the roles of Churchill, Roosevelt and Stalin. Find out more about the Holocaust and life on the Home Front.",
-    "postwar" => "Discover Cold War reports from behind the Iron Curtain, find out what it was like to live in Attlee’s Britain or explore documents on Indian Partition."
+    "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new kingdom on paper. Explore other aspects of Anglo-Saxon and Medieval England through the Magna Carta, and see the earliest records of immigration to England.",
+    "early-modern" => "Uncover the Gunpowder Plot, see how the newspapers of the time reported the Great Fire of London, delve into Nell Gwynn’s papers, and proofread Henry VIII’s will.",
+    "empire-and-industry" => "Early railway transport, the Great Exhibition 1851, and the Battle of Waterloo are all documented in this digitised collection of records of political protest, industrial revolution, and crime and punishment.",
+    "victorians" => "Peruse Jack the Ripper’s handwriting up close, see photographs of British prisoners, and see the refused naturalisation certificate of Karl Marx.",
+    "early-20th-century" => "Browse Siegfried Sassoon’s papers, see an early photograph of the Epsom Derby, and read the correspondence of the Wright Brothers.",
+    "interwar" => "Study Hitler’s will, check the original recipe for Empire Christmas pudding, read the abdication file of Edward VIII and see a photograph of the first official Home Office cat.",
+    "second-world-war" => "Chart the Battle of Britain map, read the letters of Churchill, Roosevelt and Stalin, and uncover the record file of George Orwell’s alias, Eric Blair.",
+    "postwar" => "In our biggest digitised collection, discover Cold War reports, Windrush papers and how the Moon landings were documented by the UK Government."
 
 ];
 
@@ -49,12 +47,12 @@ $era_subperiods = [
     "early-20th-century" => [],
     "interwar" => [],
     "second-world-war" => [],
-    "postwar" => [["cold-war", 1947, 1991], ["thatchers-reign", 1979, 1990], ["war-in-afghanistan", 2002, 2014]]
+    "postwar" => [["cold-war", "Cold War", 1947, 1991], ["moon-landing", "Moon Landing", 1968, 1969], ["thatchers-reign", "Thatcher", 1979, 1990], ["war-in-afghanistan", "Afghanistan War", 2002, 2014]]
 ];
 
 $homepage_heading = "Explore the digitised collection through time";
-$homepage_intro_1 = "<strong>We hold 8,998,554 items in our archive</strong>. They document wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
-$homepage_intro_2 = "<strong>433,816 of these are digitised</strong> - this means they are available to view online and download.";
-
+$homepage_intro_1 = "<strong>We hold 8,998,554 items in our archive</strong>, consisting of written documents like letters and diaries, as well as objects like weapons, textiles and maps. ";
+$homepage_intro_2 = "These 8,998,554 items document periods of UK history like wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
+$homepage_intro_3 = "<strong>433,816 of these items are digitised</strong>, which means they are available to view online and download.";
 $homepage_subheading = "Explore by time period";
 $homepage_subparagraph = "Our experts have identified eight consecutive time periods, from medieval to postwar, covering the full collection:";

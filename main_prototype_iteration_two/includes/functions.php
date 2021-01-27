@@ -59,10 +59,15 @@ function render_result($result)
         if (!$image && isset($highlights[0]["image_library_link"])) {
             $image = $highlights[0]["image_library_link"];
         }
+        if (!$image && isset($highlights[0]["image_link"])) {
+            $image = $highlights[0]["image_link"];
+        }
         if ($highlights[0]["title_of_event"]) {
             $event = $highlights[0]["title_of_event"];
         }
     }
+
+
 
     // If the image doesn't exist, or the image link isn't actually a raw image (API sometimes returns image library links) then display placeholder or return the function
     if (!$image || !(str_contains($image, ".jpg") || str_contains($image, ".png") || str_contains($image, ".jpeg"))) {
@@ -133,11 +138,11 @@ function replace_or_add_to_query($query_string, $query_to_find, $query_to_replac
 function render_subperiod($subperiod)
 {
     $subperiod_key = $subperiod[0];
-    $subperiod_start_year = $subperiod[1];
-    $subperiod_end_year = $subperiod[2];
+    $subperiod_term = $subperiod[1];
+    $subperiod_start_year = $subperiod[2];
+    $subperiod_end_year = $subperiod[3];
 
-
-    $subperiod_name = prettify_text($subperiod_key) . " ($subperiod_start_year - $subperiod_end_year)";
+    $subperiod_name = $subperiod_term . " ($subperiod_start_year - $subperiod_end_year)";
     $current_subperiod = '';
     $class = '';
     $query_string = $_SERVER['QUERY_STRING'];
@@ -145,6 +150,8 @@ function render_subperiod($subperiod)
     $current_subperiod = $_GET['subperiod'] ?? '';
     $current_start_year = $_GET['start_date'] ?? '';
     $current_end_year = $_GET['end_date'] ?? '';
+    $current_phrase = $_GET['phrase'] ?? '';
+    $current_phrase = str_replace(" ", "%20", $current_phrase);
 
 
     $query_string = replace_or_add_to_query($query_string, "&subperiod=$current_subperiod", "&subperiod=$current_subperiod", "&subperiod=$subperiod_key");
@@ -152,6 +159,9 @@ function render_subperiod($subperiod)
     $query_string = replace_or_add_to_query($query_string, "&start_date=", "&start_date=$current_start_year", "&start_date=$subperiod_start_year");
 
     $query_string = replace_or_add_to_query($query_string, "&end_date=", "&end_date=$current_end_year", "&end_date=$subperiod_end_year");
+
+    $query_string = replace_or_add_to_query($query_string, "&phrase=", "&phrase=$current_phrase", "&phrase=$subperiod_term");
+
 
 
     if ($current_subperiod === $subperiod_key) {

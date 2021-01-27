@@ -7,7 +7,7 @@ include_once 'data/era_data.php';
 ?>
 
 <body>
-    <?php include 'includes/css_js_toggler.php' ?>
+    <!-- <?php include 'includes/css_js_toggler.php' ?> -->
     <div class="tna-page home">
         <div class="container">
             <div class="row">
@@ -20,6 +20,8 @@ include_once 'data/era_data.php';
                         </div>
                         <div class="tna-page__entry">
                             <p><?php echo $homepage_intro_2 ?></p>
+                            <p><?php echo $homepage_intro_3 ?></p>
+
                         </div>
                         <div class="row">
                             <?php

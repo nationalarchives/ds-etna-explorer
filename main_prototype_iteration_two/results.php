@@ -12,6 +12,9 @@ include_once 'data/era_data.php';
 $era = $_GET["era"];
 $current_subject = $_GET["subject"] ?? '';
 $current_subperiod = $_GET["subperiod"] ?? '';
+$phrase = $_GET["phrase"] ?? '';
+$phrase = urlencode($phrase);
+
 
 
 $era_time_period_min = $era_time_periods[$era][0];
@@ -39,7 +42,7 @@ if (!isset($era)) {
     header('Location: index.php');
 }
 
-$api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/?no_of_hits=20&era=$era&start_year=$start_date&end_year=$end_date&subject=$current_subject";
+$api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/?no_of_hits=20&era=$era&start_year=$start_date&end_year=$end_date&subject=$current_subject&phrase=$phrase";
 $search_results = get_data_from_api($api_url);
 
 $total = $search_results["filtered_total"];
@@ -50,8 +53,6 @@ usort($hits, function ($a, $b) { //Sort the array using a user defined function
     return $a["_source"]["first_date"] < $b["_source"]["first_date"] ? -1 : 1; //Compare the scores
 });
 
-echo $api_url;
-
 
 // echo "<pre>";
 // var_dump($search_results);
@@ -61,7 +62,7 @@ $title = prettify_text($era);
 ?>
 
 <body>
-    <a href="<?php echo "/toggle.php?redirect=" . $_SERVER['REQUEST_URI'] ?>">Toggle CSS & JS</a>
+    <!-- <?php include 'includes/css_js_toggler.php' ?> -->
 
     <main role="main">
         <div class="container">
@@ -70,7 +71,7 @@ $title = prettify_text($era);
             <h1><?php echo "$title ($start_date-$end_date)"; ?></h1>
             <p><?php echo $era_descriptions[$era] ?></p>
             <?php if (!empty($era_subperiods[$era])) : ?>
-                <h2>Refine by sub period</h2>
+                <h2 class="refine-h2">Refine by sub period</h2>
 
             <?php endif; ?>
 
@@ -81,6 +82,8 @@ $title = prettify_text($era);
                         $url_with_subperiod_removed = str_replace("&subperiod=$current_subperiod", "&subperiod=", $_SERVER['QUERY_STRING']);
                         $url_with_subperiod_removed = str_replace("&start_date=$start_date", "&start_date=", $url_with_subperiod_removed);
                         $url_with_subperiod_removed = str_replace("&end_date=$end_date", "&end_date=", $url_with_subperiod_removed);
+                        $url_with_subperiod_removed = str_replace("&phrase=$phrase", "&phrase=", $url_with_subperiod_removed);
+
 
 
                         echo "<li><a href='/results.php?$url_with_subperiod_removed#results'>None</a></li>";
@@ -117,9 +120,15 @@ $title = prettify_text($era);
 
     <?php
     if ($_COOKIE["disable_enhancements"] != "true") {
-        echo '<script src="/scripts/refine.js"></script>';
+        // echo '<script src="/scripts/refine.js"></script>';
     }
     ?>
+
+    <?php
+    echo "<script>
+        console.log('API request url is: $api_url');
+    </script>" ?>;
+
 </body>
 
 </html>

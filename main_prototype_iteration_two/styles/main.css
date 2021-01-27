@@ -123,6 +123,7 @@ input[type="checkbox"] {
 }
 
 #logo {
+  margin-top: 20px;
   width: 100px;
   margin-bottom: 50px;
 }
@@ -191,7 +192,8 @@ input[type="checkbox"] {
   color: #26262a;
 }
 
-#subject-refine-h2 {
+#subject-refine-h2,
+.refine-h2 {
   font-size: 16px;
   font-weight: bold;
 }
