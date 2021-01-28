@@ -13,8 +13,8 @@ $era = $_GET["era"];
 $current_subject = $_GET["subject"] ?? '';
 $current_subperiod = $_GET["subperiod"] ?? '';
 $phrase = $_GET["phrase"] ?? '';
-$phrase = urlencode($phrase);
-
+$api_phrase = urlencode($phrase);
+$string_match_phrase = str_replace(" ", "%20", $phrase);
 
 
 $era_time_period_min = $era_time_periods[$era][0];
@@ -42,7 +42,7 @@ if (!isset($era)) {
     header('Location: index.php');
 }
 
-$api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/?no_of_hits=20&era=$era&start_year=$start_date&end_year=$end_date&subject=$current_subject&phrase=$phrase";
+$api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/?no_of_hits=20&era=$era&start_year=$start_date&end_year=$end_date&subject=$current_subject&phrase=$api_phrase";
 $search_results = get_data_from_api($api_url);
 
 $total = $search_results["filtered_total"];
@@ -80,7 +80,7 @@ $title = prettify_text($era);
                     <?php if ($current_subperiod) :
 
                         $url_with_subperiod_removed = str_replace("&subperiod=$current_subperiod", "&subperiod=", $_SERVER['QUERY_STRING']);
-                        $url_with_subperiod_removed = str_replace("&phrase=$phrase", "&phrase=", $url_with_subperiod_removed);
+                        $url_with_subperiod_removed = str_replace("&phrase=$string_match_phrase", "&phrase=", $url_with_subperiod_removed);
 
 
 
