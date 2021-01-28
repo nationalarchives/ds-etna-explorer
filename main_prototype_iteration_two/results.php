@@ -80,8 +80,6 @@ $title = prettify_text($era);
                     <?php if ($current_subperiod) :
 
                         $url_with_subperiod_removed = str_replace("&subperiod=$current_subperiod", "&subperiod=", $_SERVER['QUERY_STRING']);
-                        $url_with_subperiod_removed = str_replace("&start_date=$start_date", "&start_date=", $url_with_subperiod_removed);
-                        $url_with_subperiod_removed = str_replace("&end_date=$end_date", "&end_date=", $url_with_subperiod_removed);
                         $url_with_subperiod_removed = str_replace("&phrase=$phrase", "&phrase=", $url_with_subperiod_removed);
 
 

@@ -139,26 +139,19 @@ function render_subperiod($subperiod)
 {
     $subperiod_key = $subperiod[0];
     $subperiod_term = $subperiod[1];
-    $subperiod_start_year = $subperiod[2];
-    $subperiod_end_year = $subperiod[3];
 
-    $subperiod_name = $subperiod_term . " ($subperiod_start_year - $subperiod_end_year)";
+    $subperiod_name = $subperiod_term;
     $current_subperiod = '';
     $class = '';
     $query_string = $_SERVER['QUERY_STRING'];
 
     $current_subperiod = $_GET['subperiod'] ?? '';
-    $current_start_year = $_GET['start_date'] ?? '';
-    $current_end_year = $_GET['end_date'] ?? '';
+
     $current_phrase = $_GET['phrase'] ?? '';
     $current_phrase = str_replace(" ", "%20", $current_phrase);
 
 
     $query_string = replace_or_add_to_query($query_string, "&subperiod=$current_subperiod", "&subperiod=$current_subperiod", "&subperiod=$subperiod_key");
-
-    $query_string = replace_or_add_to_query($query_string, "&start_date=", "&start_date=$current_start_year", "&start_date=$subperiod_start_year");
-
-    $query_string = replace_or_add_to_query($query_string, "&end_date=", "&end_date=$current_end_year", "&end_date=$subperiod_end_year");
 
     $query_string = replace_or_add_to_query($query_string, "&phrase=", "&phrase=$current_phrase", "&phrase=$subperiod_term");
 

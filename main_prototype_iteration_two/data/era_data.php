@@ -47,7 +47,16 @@ $era_subperiods = [
     "early-20th-century" => [],
     "interwar" => [],
     "second-world-war" => [],
-    "postwar" => [["cold-war", "Cold War", 1947, 1991], ["moon-landing", "Moon Landing", 1968, 1969], ["thatchers-reign", "Thatcher", 1979, 1990], ["war-in-afghanistan", "Afghanistan War", 2002, 2014]]
+    "postwar" => [
+        ["diplomacy-and-foreign-relations", "Diplomacy and foreign relations"],
+        ["education", "Education"], ["empire-commonwealth-and-de-colonisation", "Empire, commonwealth and de-colonisation"], ["finance-and-the-economy", "Finance and the economy"],
+        ["industry-agriculture-and-commerce", "Industry, agriculture and commerce"],
+        ["infrastructure-energy-and-natural-resources", "Infrastructure, energy and natural resources",],
+        ["law-liberty-and-society", "Law, liberty and society"],
+        ["limited-war-conflict-and-the-politics-of-defence", "Limited war, conflict and the politics of defence"],
+        ["total-war", "Total war"],
+        ["welfare-social-security-and-self-help", "Welfare, social security and self-help"]
+    ]
 ];
 
 $homepage_heading = "Explore the digitised collection through time";
