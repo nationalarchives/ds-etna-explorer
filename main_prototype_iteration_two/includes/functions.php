@@ -12,7 +12,7 @@ function render_card($era)
     <div class='col-lg-6'>
     <div class='card'>
         <div class='card-body'>
-        <div class='era-image'><a href='/results.php?era=$era'><img src='images/$era.jpg' /></a></div>
+        <div class='era-image'><a href='/results.php?era=$era'><img src='images/$era.jpg' alt="Image depicting the $h3_era_text era" /></a></div>
             <h3 class='card-title'><a href='/results.php?era=$era'>$h3_era_text</a></h3>
             <p class='card-subtitle mb-2 text-muted'>$time_period[0] - $time_period[1]</p>
             <p class='card-subtitle mb-2 text-muted'>$records_count digitised records available</p>
@@ -85,7 +85,7 @@ function render_result($result)
     HTML;
 
     if ($image) :
-        echo "<a href='/details_page.php'><img src= '$image'/></a>";
+        echo "<a href='/details_page.php'><img src= '$image' alt='Thumbnail for $title'/></a>";
     endif;
 
     if ($event) :
