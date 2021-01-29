@@ -67,41 +67,47 @@ $title = prettify_text($era);
         <div class="container">
             <a href="/" id="logo-link"><img src="/images/tna-square-logo.svg" id="logo" alt="The National Archives Square Logo" /></a>
             <p><a href="/">Home</a></p>
-            <h1><?php echo "$title ($start_date-$end_date)"; ?></h1>
-            <p><?php echo $era_descriptions[$era] ?></p>
+            <div class="results-banner" style=<?php echo " \"background-image: url('images/$era.jpg'); \"" ?>>
+                <h1 id="era-h1"><?php echo "$title ($start_date-$end_date)"; ?></h1>
+                <p><?php echo $era_descriptions[$era] ?></p>
+            </div>
+
             <?php if (!empty($era_subcategories[$era])) : ?>
-                <h2 class="refine-h2">Refine by subcategory</h2>
+                <div class="sticky-div">
+                    <h2 class="refine-h2">Refine by subcategory</h2>
+                    <div id="subcategories">
+                        <ul>
+                            <?php if ($current_subcategory) :
+
+                                $url_with_subcategory_removed = str_replace("&subcategory=$current_subcategory", "&subcategory=", $_SERVER['QUERY_STRING']);
+                                $url_with_subcategory_removed = str_replace("&phrase=$string_match_phrase", "&phrase=", $url_with_subcategory_removed);
+
+
+
+                                echo "<li><a href='/results.php?$url_with_subcategory_removed#results'>None</a></li>";
+
+                            endif; ?>
+
+                            <?php
+
+                            if (!empty($era_subcategories[$era])) :
+
+                                foreach ($era_subcategories[$era] as $subcategory) : ?>
+
+
+
+                                    <?php render_subcategory($subcategory); ?>
+                            <?php
+                                endforeach;
+                            endif;
+                            ?>
+                        </ul>
+                    </div>
+                </div>
 
             <?php endif; ?>
 
-            <div id="subjects">
-                <ul>
-                    <?php if ($current_subcategory) :
 
-                        $url_with_subcategory_removed = str_replace("&subcategory=$current_subcategory", "&subcategory=", $_SERVER['QUERY_STRING']);
-                        $url_with_subcategory_removed = str_replace("&phrase=$string_match_phrase", "&phrase=", $url_with_subcategory_removed);
-
-
-
-                        echo "<li><a href='/results.php?$url_with_subcategory_removed#results'>None</a></li>";
-
-                    endif; ?>
-
-                    <?php
-
-                    if (!empty($era_subcategories[$era])) :
-
-                        foreach ($era_subcategories[$era] as $subcategory) : ?>
-
-
-
-                            <?php render_subcategory($subcategory); ?>
-                    <?php
-                        endforeach;
-                    endif;
-                    ?>
-                </ul>
-            </div>
 
             <h2 id="results" class="sr-only">Results</h2>
             <p id="records-available"><?php echo "$total digitised records available"; ?>
