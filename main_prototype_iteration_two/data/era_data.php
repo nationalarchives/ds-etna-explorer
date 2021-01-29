@@ -17,6 +17,27 @@ $era_descriptions = [
 
 ];
 
+$collection_descriptions = [
+    "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new kingdom on paper. Explore other aspects of Anglo-Saxon and Medieval England through the Magna Carta, and see the earliest records of immigration to England.",
+    "early-modern" => "Uncover the Gunpowder Plot, see how the newspapers of the time reported the Great Fire of London, delve into Nell Gwynn’s papers, and proofread Henry VIII’s will.",
+    "empire-and-industry" => "Early railway transport, the Great Exhibition 1851, and the Battle of Waterloo are all documented in this digitised collection of records of political protest, industrial revolution, and crime and punishment.",
+    "victorians" => "Peruse Jack the Ripper’s handwriting up close, see photographs of British prisoners, and see the refused naturalisation certificate of Karl Marx.",
+    "early-20th-century" => "Browse Siegfried Sassoon’s papers, see an early photograph of the Epsom Derby, and read the correspondence of the Wright Brothers.",
+    "interwar" => "Study Hitler’s will, check the original recipe for Empire Christmas pudding, read the abdication file of Edward VIII and see a photograph of the first official Home Office cat.",
+    "second-world-war" => "In this collection:
+    <ul>
+    <li>Chart the Battle of Britain map</li>
+    <li>Read the letters of Churchill, Roosevelt and Stalin</li>
+    <li>Uncover the record file of George Orwell’s alias, Eric Blair.</li>
+    </ul>",
+    "postwar" => "Collection highlights include:
+    <ul>
+    <li>Cold War reports</li>
+    <li>Windrush papers</li>
+    <li>How the Moon landings were documented by the UK Government</li>"
+
+];
+
 $era_records_count = [
     "medieval" => 48662,
     "early-modern" => 419831,

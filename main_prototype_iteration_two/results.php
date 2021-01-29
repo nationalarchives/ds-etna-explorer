@@ -67,9 +67,9 @@ $title = prettify_text($era);
         <div class="container">
             <a href="/" id="logo-link"><img src="/images/tna-square-logo.svg" id="logo" alt="The National Archives Square Logo" /></a>
             <p><a href="/">Home</a></p>
-            <div class="results-banner" style=<?php echo " \"background-image: url('images/$era.jpg'); \"" ?>>
+            <div>
                 <h1 id="era-h1"><?php echo "$title ($start_date-$end_date)"; ?></h1>
-                <p><?php echo $era_descriptions[$era] ?></p>
+                <p><?php echo $collection_descriptions[$era] ?></p>
             </div>
 
             <?php if (!empty($era_subcategories[$era])) : ?>
