@@ -24,17 +24,17 @@ $collection_descriptions = [
     "victorians" => "Peruse Jack the Ripper’s handwriting up close, see photographs of British prisoners, and see the refused naturalisation certificate of Karl Marx.",
     "early-20th-century" => "Browse Siegfried Sassoon’s papers, see an early photograph of the Epsom Derby, and read the correspondence of the Wright Brothers.",
     "interwar" => "Study Hitler’s will, check the original recipe for Empire Christmas pudding, read the abdication file of Edward VIII and see a photograph of the first official Home Office cat.",
-    "second-world-war" => "In this collection:
+    "second-world-war" => "Collection highlights include:
     <ul>
-    <li>Chart the Battle of Britain map</li>
-    <li>Read the letters of Churchill, Roosevelt and Stalin</li>
-    <li>Uncover the record file of George Orwell’s alias, Eric Blair.</li>
+    <li>Battle of Britain map</li>
+    <li>Letters of Churchill, Roosevelt and Stalin</li>
+    <li>Record file of George Orwell’s alias, Eric Blair.</li>
     </ul>",
     "postwar" => "Collection highlights include:
     <ul>
     <li>Cold War reports</li>
     <li>Windrush papers</li>
-    <li>How the Moon landings were documented by the UK Government</li>"
+    <li>How the Moon landings were documented by the UK Government</li></ul>"
 
 ];
 
