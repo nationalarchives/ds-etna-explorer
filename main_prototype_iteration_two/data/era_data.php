@@ -18,14 +18,14 @@ $era_descriptions = [
 ];
 
 $era_records_count = [
-    "medieval" => 6672,
-    "early-modern" => 54950,
-    "empire-and-industry" => 23853,
-    "victorians" => 37659,
-    "early-20th-century" => 56260,
-    "interwar" => 66117,
-    "second-world-war" => 49099,
-    "postwar" => 139206
+    "medieval" => 48662,
+    "early-modern" => 419831,
+    "empire-and-industry" => 738441,
+    "victorians" => 572807,
+    "early-20th-century" => 6584048,
+    "interwar" => 6370310,
+    "second-world-war" => 527747,
+    "postwar" => 554188
 ];
 
 $era_time_periods = [
@@ -39,7 +39,7 @@ $era_time_periods = [
     "postwar" => [1945, 2020]
 ];
 
-$era_subperiods = [
+$era_subcategories = [
     "medieval" => [],
     "early-modern" => [],
     "empire-and-industry" => [],
@@ -60,8 +60,8 @@ $era_subperiods = [
 ];
 
 $homepage_heading = "Explore the digitised collection through time";
-$homepage_intro_1 = "<strong>We hold 8,998,554 items in our archive</strong>, consisting of written documents like letters and diaries, as well as objects like weapons, textiles and maps. ";
-$homepage_intro_2 = "These 8,998,554 items document periods of UK history like wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
-$homepage_intro_3 = "<strong>433,816 of these items are digitised</strong>, which means they are available to view online and download.";
+$homepage_intro_1 = "<strong>We hold 24,218,562 items in our archive</strong>, consisting of written documents like letters and diaries, as well as objects like weapons, textiles and maps. ";
+$homepage_intro_2 = "These 24,218,562 items document periods of UK history like wars, revolutions, landmark rulings and life stories of iconic figures like Shakespeare, Queen Victoria and Gandhi.";
+$homepage_intro_3 = "<strong>8,998,554 of these items are digitised</strong>, which means they are available to view online and download.";
 $homepage_subheading = "Explore by time period";
 $homepage_subparagraph = "Our experts have identified eight consecutive time periods, from medieval to postwar, covering the full collection:";

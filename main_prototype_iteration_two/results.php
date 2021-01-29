@@ -11,7 +11,7 @@ include_once 'data/era_data.php';
 
 $era = $_GET["era"];
 $current_subject = $_GET["subject"] ?? '';
-$current_subperiod = $_GET["subperiod"] ?? '';
+$current_subcategory = $_GET["subcategory"] ?? '';
 $phrase = $_GET["phrase"] ?? '';
 $api_phrase = urlencode($phrase);
 $string_match_phrase = str_replace(" ", "%20", $phrase);
@@ -45,8 +45,7 @@ if (!isset($era)) {
 $api_url = "https://alpha.nationalarchives.gov.uk/idresolver/collectionexplorer/?no_of_hits=20&era=$era&start_year=$start_date&end_year=$end_date&subject=$current_subject&phrase=$api_phrase";
 $search_results = get_data_from_api($api_url);
 
-$total = $search_results["filtered_total"];
-$total_fake_digitised = number_format(round($total * 0.05)); // Give illusion of only showing 5% of our collection as digitised
+$total = number_format($search_results["filtered_total"]);
 $hits = $search_results["hits"];
 
 usort($hits, function ($a, $b) { //Sort the array using a user defined function
@@ -70,33 +69,33 @@ $title = prettify_text($era);
             <p><a href="/">Home</a></p>
             <h1><?php echo "$title ($start_date-$end_date)"; ?></h1>
             <p><?php echo $era_descriptions[$era] ?></p>
-            <?php if (!empty($era_subperiods[$era])) : ?>
-                <h2 class="refine-h2">Refine by sub period</h2>
+            <?php if (!empty($era_subcategories[$era])) : ?>
+                <h2 class="refine-h2">Refine by subcategory</h2>
 
             <?php endif; ?>
 
             <div id="subjects">
                 <ul>
-                    <?php if ($current_subperiod) :
+                    <?php if ($current_subcategory) :
 
-                        $url_with_subperiod_removed = str_replace("&subperiod=$current_subperiod", "&subperiod=", $_SERVER['QUERY_STRING']);
-                        $url_with_subperiod_removed = str_replace("&phrase=$string_match_phrase", "&phrase=", $url_with_subperiod_removed);
+                        $url_with_subcategory_removed = str_replace("&subcategory=$current_subcategory", "&subcategory=", $_SERVER['QUERY_STRING']);
+                        $url_with_subcategory_removed = str_replace("&phrase=$string_match_phrase", "&phrase=", $url_with_subcategory_removed);
 
 
 
-                        echo "<li><a href='/results.php?$url_with_subperiod_removed#results'>None</a></li>";
+                        echo "<li><a href='/results.php?$url_with_subcategory_removed#results'>None</a></li>";
 
                     endif; ?>
 
                     <?php
 
-                    if (!empty($era_subperiods[$era])) :
+                    if (!empty($era_subcategories[$era])) :
 
-                        foreach ($era_subperiods[$era] as $subperiod) : ?>
+                        foreach ($era_subcategories[$era] as $subcategory) : ?>
 
 
 
-                            <?php render_subperiod($subperiod); ?>
+                            <?php render_subcategory($subcategory); ?>
                     <?php
                         endforeach;
                     endif;
@@ -105,7 +104,7 @@ $title = prettify_text($era);
             </div>
 
             <h2 id="results" class="sr-only">Results</h2>
-            <p id="records-available"><?php echo "$total_fake_digitised digitised records available"; ?>
+            <p id="records-available"><?php echo "$total digitised records available"; ?>
             <div class="masonry">
 
                 <?php foreach ($hits as  $result) : ?>

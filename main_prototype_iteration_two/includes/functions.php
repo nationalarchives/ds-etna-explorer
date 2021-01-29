@@ -135,33 +135,33 @@ function replace_or_add_to_query($query_string, $query_to_find, $query_to_replac
     return $query_string;
 }
 
-function render_subperiod($subperiod)
+function render_subcategory($subcategory)
 {
-    $subperiod_key = $subperiod[0];
-    $subperiod_term = $subperiod[1];
+    $subcategory_key = $subcategory[0];
+    $subcategory_term = $subcategory[1];
 
-    $subperiod_name = $subperiod_term;
-    $current_subperiod = '';
+    $subcategory_name = $subcategory_term;
+    $current_subcategory = '';
     $class = '';
     $query_string = $_SERVER['QUERY_STRING'];
 
-    $current_subperiod = $_GET['subperiod'] ?? '';
+    $current_subcategory = $_GET['subcategory'] ?? '';
 
     $current_phrase = $_GET['phrase'] ?? '';
     $current_phrase = str_replace(" ", "%20", $current_phrase);
 
 
-    $query_string = replace_or_add_to_query($query_string, "&subperiod=$current_subperiod", "&subperiod=$current_subperiod", "&subperiod=$subperiod_key");
+    $query_string = replace_or_add_to_query($query_string, "&subcategory=$current_subcategory", "&subcategory=$current_subcategory", "&subcategory=$subcategory_key");
 
-    $query_string = replace_or_add_to_query($query_string, "&phrase=", "&phrase=$current_phrase", "&phrase=$subperiod_term");
+    $query_string = replace_or_add_to_query($query_string, "&phrase=", "&phrase=$current_phrase", "&phrase=$subcategory_term");
 
 
 
-    if ($current_subperiod === $subperiod_key) {
+    if ($current_subcategory === $subcategory_key) {
         $class = "selected";
     }
 
     echo <<<HTML
-    <li><a class="$class" href="/results.php?$query_string#results">$subperiod_name</a></li>
+    <li><a class="$class" href="/results.php?$query_string#results">$subcategory_name</a></li>
     HTML;
 }
