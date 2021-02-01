@@ -6,6 +6,8 @@ function render_card($era)
 
     $description = $era_descriptions[$era]; // from include
     $time_period = $era_time_periods[$era]; // from include
+    $category_text = $era_category_text[$era]; // from include
+
     $records_count = number_format($era_records_count[$era]);
     $h3_era_text = prettify_text($era);
     echo <<<HTML
@@ -14,6 +16,7 @@ function render_card($era)
         <div class='card-body'>
         <div class='era-image'><a href='/results.php?era=$era'><img src='images/$era.jpg' alt="Image depicting the $h3_era_text era" /></a></div>
             <h3 class='card-title'><a href='/results.php?era=$era'>$h3_era_text</a></h3>
+            <p class='card-subtitle mb-2 text-muted'>$category_text</p>
             <p class='card-subtitle mb-2 text-muted'>$time_period[0] - $time_period[1]</p>
             <p class='card-subtitle mb-2 text-muted'>$records_count digitised records available</p>
 

@@ -6,35 +6,83 @@ rulings, and iconic figures including Shakespeare, Queen Victoria, Gandhi and Ch
 
 $era_descriptions = [
 
-    "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new kingdom on paper. Explore other aspects of Anglo-Saxon and Medieval England through the Magna Carta, and see the earliest records of immigration to England.",
-    "early-modern" => "Uncover the Gunpowder Plot, see how the newspapers of the time reported the Great Fire of London, delve into Nell Gwynn’s papers, and proofread Henry VIII’s will.",
-    "empire-and-industry" => "Early railway transport, the Great Exhibition 1851, and the Battle of Waterloo are all documented in this digitised collection of records of political protest, industrial revolution, and crime and punishment.",
-    "victorians" => "Peruse Jack the Ripper’s handwriting up close, see photographs of British prisoners, and see the refused naturalisation certificate of Karl Marx.",
-    "early-20th-century" => "Browse Siegfried Sassoon’s papers, see an early photograph of the Epsom Derby, and read the correspondence of the Wright Brothers.",
-    "interwar" => "Study Hitler’s will, check the original recipe for Empire Christmas pudding, read the abdication file of Edward VIII and see a photograph of the first official Home Office cat.",
-    "second-world-war" => "Chart the Battle of Britain map, read the letters of Churchill, Roosevelt and Stalin, and uncover the record file of George Orwell’s alias, Eric Blair.",
-    "postwar" => "In our biggest digitised collection, discover Cold War reports, Windrush papers and how the Moon landings were documented by the UK Government."
-
-];
-
-$collection_descriptions = [
-    "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new kingdom on paper. Explore other aspects of Anglo-Saxon and Medieval England through the Magna Carta, and see the earliest records of immigration to England.",
-    "early-modern" => "Uncover the Gunpowder Plot, see how the newspapers of the time reported the Great Fire of London, delve into Nell Gwynn’s papers, and proofread Henry VIII’s will.",
-    "empire-and-industry" => "Early railway transport, the Great Exhibition 1851, and the Battle of Waterloo are all documented in this digitised collection of records of political protest, industrial revolution, and crime and punishment.",
-    "victorians" => "Peruse Jack the Ripper’s handwriting up close, see photographs of British prisoners, and see the refused naturalisation certificate of Karl Marx.",
-    "early-20th-century" => "Browse Siegfried Sassoon’s papers, see an early photograph of the Epsom Derby, and read the correspondence of the Wright Brothers.",
-    "interwar" => "Study Hitler’s will, check the original recipe for Empire Christmas pudding, read the abdication file of Edward VIII and see a photograph of the first official Home Office cat.",
+    "medieval" => "
+    Collection highlights include:
+    <ul>
+    <li>Great Domesday</li>
+    <li>Magna Carta</li>
+    <li>Caxton’s printed indulgence</li>
+    </ul>",
+    "early-modern" => "Collection highlights:
+    <ul>
+<li>Uncover the Gunpowder Plot</li>
+<li>See how the newspapers of the time reported the Great Fire of London</li>
+<li>Delve into Nell Gwynn’s papers</li>
+<li>Proofread Henry VIII’s will.</li>
+</ul>",
+    "empire-and-industry" => "Collection highlights:
+    <ul>
+    <li>Early railway transport</li>
+    <li>the Great Exhibition 1851</li>
+    <li>Battle of Waterloo</li>
+    </ul>",
+    "victorians" => "
+    Collection highlights:
+    <ul>
+    <li>Peruse Jack the Ripper’s handwriting up close</li>
+    <li>See photographs of British prisoner</li>
+    <li>View the refused naturalisation certificate of Karl Marx.</li>
+    </ul>",
+    "early-20th-century" => "
+    Collection highlights:
+    <ul>
+    <li>Browse Siegfried Sassoon’s papers</li>
+    <li>See an early photograph of the Epsom Derby</li>
+    <li>Read the correspondence of the Wright Brothers.</li>
+    </ul>",
+    "interwar" => "
+    Collection highlights:
+    <ul>
+    <li>Study Hitler’s will</li>
+    <li>Check the original recipe for Empire Christmas pudding</li>
+    <li>Read the abdication file of Edward VIII</li>
+    <li>See a photograph of the first official Home Office cat.</li>
+    </ul>",
     "second-world-war" => "Collection highlights include:
     <ul>
     <li>Battle of Britain map</li>
     <li>Letters of Churchill, Roosevelt and Stalin</li>
-    <li>Record file of George Orwell’s alias, Eric Blair.</li>
-    </ul>",
-    "postwar" => "Collection highlights include:
+    <li>Record file of George Orwell’s alias, Eric Blair</li>",
+    "postwar" => "
+    Collection highlights include:
     <ul>
-    <li>Cold War reports</li>
-    <li>Windrush papers</li>
-    <li>How the Moon landings were documented by the UK Government</li></ul>"
+        <li>Cold War reports</li>
+        <li>Windrush papers</li>
+        <li>How the Moon landings were documented by the UK Government</li>
+    </ul>"
+
+];
+
+$era_category_text = [
+    "medieval" => "Categories include patent rolls, seals, letters.",
+    "early-modern" => "Categories include: newspapers, wills, diaries.",
+    "empire-and-industry" => "Categories include: Political protest, Industrial revolution, and Crime and punishment",
+    "victorians" => "",
+    "early-20th-century" => "",
+    "interwar" => "",
+    "second-world-war" => "Categories include Photographs, Letters and Maps.",
+    "postwar" => "Categories include Total war, Education, Empire"
+];
+
+$era_long_descriptions = [
+    "medieval" => "William the Conqueror’s Domesday survey aimed to put every inch of his new kingdom on paper. Explore other aspects of Anglo-Saxon and Medieval England through the Magna Carta, and see the earliest records of immigration to England.",
+    "early-modern" => "Uncover the Gunpowder Plot, see how the newspapers of the time reported the Great Fire of London, delve into Nell Gwynn’s papers, and proofread Henry VIII’s will.",
+    "empire-and-industry" => "Early railway transport, the Great Exhibition 1851, and the Battle of Waterloo are all documented in this digitised collection of records of political protest, industrial revolution, and crime and punishment.",
+    "victorians" => "Peruse Jack the Ripper’s handwriting up close, see photographs of British prisoners, and see the refused naturalisation certificate of Karl Marx.",
+    "early-20th-century" => "Browse Siegfried Sassoon’s papers, see an early photograph of the Epsom Derby, and read the correspondence of the Wright Brothers.",
+    "interwar" => "Study Hitler’s will, check the original recipe for Empire Christmas pudding, read the abdication file of Edward VIII and see a photograph of the first official Home Office cat.",
+    "second-world-war" => "Our records cover the history of the Second World War including the roles of Churchill, Roosevelt and Stalin. Find out more about the Holocaust and life on the Home Front.",
+    "postwar" => "Discover Cold War reports from behind the Iron Curtain, find out what it was like to live in Attlee’s Britain or explore documents on Indian Partition."
 
 ];
 
