@@ -75,8 +75,6 @@ This version was user tested with six participants in December 2020 and recommen
 
 ## User testing recommendations
 
-### Testing of iteration two
-
 The following user testing reports have been produced: 
 
 * [User testing of iteration two](user_research/iteration_two_user_testing_report.pdf) 
