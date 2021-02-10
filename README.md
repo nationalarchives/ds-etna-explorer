@@ -2,8 +2,14 @@
 
 ## Contents
 
-* [Iteration two](#iteration-two)
-* [Iteration one](#iteration-one)
+* Iteration two
+    * [Overview and user testing recommendations](#iteration-two)
+    * [Screenshots](iterations/screenshots/iteration_two)
+    * [User testing report](user_research/iteration_two_user_testing_report.pdf)
+* Iteration one
+    * [Overview](#iteration-one)
+    * [Screenshots](iterations/screenshots/iteration_one)
+    * [User testing report](user_research/iteration_one_user_testing_report.pdf)
 
 ## Iterations
 
