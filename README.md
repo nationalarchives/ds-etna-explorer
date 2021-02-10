@@ -1,135 +1,77 @@
+# Explorer
+
 ## Contents
 
-- **Alpha prototype**
-  - [Background](#background)
-  - [Interactions in the Alpha prototype](#interactions-in-the-current-prototype)
-    - [Select a time period](#select-a-time-period)
-    - [Change start and end date](#change-start-and-end-date)
-  - [Known issues](#known-issues)
-    - [Accessibility issues](#accessibility-issues)
-    - [Usability and other issues](#usability-and-other-issues)
-  - [Questions that we have](#questions-that-we-have)
-  - [Initial thoughts](#initial-thoughts)
-- **Next iteration**
-  - [Proposals](#proposals)
+* [Iteration two](#iteration-two)
+* [Iteration one](#iteration-one)
 
-# Time explorer
+## Iterations
 
-This repository is a place to capture information relating to:
+### Iteration two
 
-1. the 'timeline' widget feature developed during Alpha
-2. how we plan to improve it in Beta
+This [version](iterations/code/iteration_two) was developed in response to recommendations from user testing of the first iteration. It was then user tested with six participants in late January/early February 2021.  Recommendations from this [user testing report](user_research/iteration_two_user_testing_report.pdf) which relate to this the user experience are listed below.
 
-**Please note:** this is focussed only on the widget and, where relevant, how it relates to other pages. It does not cover other aspects of the explorer prototype (such as pre-defined quick filters, the "Add a term to filter results" input or the results display)
+#### User testing recommendations
 
-![The widget](images/whole_page.png "The widget")
+##### Homepage
 
-## Background
+* As these were easier to read, chunk any time period descriptions into short and descriptive bulleted text.
+* Provide multiple entry points for the archives. Consider: time, geography, subject, as
+well as popular or trending content.
+* Improve the copy at the top of the homepage:
+    * To make the numbers easier to read round them and write them out. Instead of 24,218,562, write 24 million records.
+    * So as not to confuse or mislead users, clarify that the archive holds
+documentation about weapons, or weapons that compliment records.
+    * Clarify what is actually available online: mention that 24 million records are physically held in the archives and 9 million are available to view on this website.
+    * Refine the time period descriptions:
+        * If possible add more context to the homepage bullet points, providing more
+        explanation of key documents. If there isn’t space, provide an explanation on the next page.
+        * Use clear and specific labels for the categories. Document types were easier
+        to understand than broad categories.
+        * Check that the most important records and events are the ones mentioned in the collection highlights on the homepage
+        * Consider linking categories from within the time period descriptions on the
+homepage to a related list of refined results within the time period.
+* Review the homepage time period images and ensure they are representative of the time period and relate to the content described within the categories and collection highlights text.
 
-The purpose of the widget is to facilitate exploration of the collection using the dimension of time. A prototype developed during Alpha from [a workshop sketch](https://raw.githubusercontent.com/nationalarchives/ds-alpha/master/ux/ideation/sketching-session-1/IMG_20200121_150131.jpg?token=AD2CJS4H6MLXNVSXSG4OX2C7VUGP2) can be found in the [explorer prototype](https://alpha.nationalarchives.gov.uk/collectionexplorer/?start_year=0974&end_year=1485&era=medieval).
+##### Results page
 
-As can be seen below, the current widget has six discrete elements:
+* At a minimum organise content by date – left to right, or by relevance with the most important documents at the top. Next to the total number of records explain how the content is sorted. For example: 100,000 total records | Sorted by year ascending. For more refined prototypes consider providing users with more than one way to sort results.
+* The thumbnail results page tested in Explorer 2.1 was better received.
+    * Consider moving the filters to the right or left hand side of the page so there is more space vertically.
+    * So support scanning and reading, the record ‘boxes’ could be condensed:
+        * remove the year
+        * shorten the title
+        * remove the second title at the bottom.
+* Use the same amount of space between record rows and columns, and possibly an amount somewhere between the two.
+* Conduct further research to understand whether non-digitised content should be included.
 
-- **Time period selectors** presented in (mostly) left-to-right _reverse chronological_ order
-- A **record distribution graphic** presented in left-to-right _chronological_ order
-- **Start and end date selectors** which serve as controls and indicators of the current selection
-- **Record count**
-- Time period **title**
-- Time period **description**
+##### Results page - categories and filters
 
-![Screenshot of timeline](images/alpha_timeline.jpg "Screenshot of timeline")
+* Consider testing alternative, smaller patterns for the filters.
+* Generate a user-centred taxonomy for the archive. Test this independently to any Explorer prototype. Once a working taxonomy has been devised incorporate this into a future prototype and resume iterative testing. To test the explorer as a concept, a user-centred taxonomy could be limited to a portion of the archive, e.g. the medieval time period.
+* Consider providing a short description to appear alongside filtered content to provide
+users with further context.
+* To maintain the archives reputation and authority, the results within a time period or category must be relevant. Only include results that fall within the time period and ensure that any record metadata that is shown within the results-set aligns with the time period. A 1888 Jack the Ripper letter should appear under the Victorian time period.
 
-## Interactions in the current prototype
+##### Results page - record thumbnail
 
-As can be seen below, there are two interactions available to users:
+Users will be unable to explore the archives unless we provide clear, concise and descriptive record titles. As long as titles are hard to understand and contain catalogue references, the archives will be perceived as for internal and expert use.
 
-- Select a time period
-- Change start or end date within currently selected period
+##### Details page 
 
-Depending on the interaction there are subtle differences to the way the page is updated.
+The details page must include the option to view and download the document, if digitised. Further research should reveal what additional content must be included
 
-![Explorer flow](images/explorer_flow.png "Explorer flow")
+### Iteration one
 
-### Select a time period
+This [version](iterations/code/iteration_one) was the first produced within the Beta timebox for project Etna. It represented a significant revision of the [time explorer](/alpha_time_explorer.md) which was produced during the Alpha phase with many of the changes reflecting necessary accessibility and usability improvements. 
 
-By default the time period shown is 'All periods'. The user can then, optionally, select from a list of a pre-defined time periods. These include:
+This version was user tested with six participants in December 2020 and recommendations from the [user testing report](user_research/iteration_one_user_testing_report.pdf) were taken forward into [iteration two](#iteration-two).
 
-- **All periods** (this is the default)
-- A list (presented left-to-right in _reverse chronological_ order) as:
-  - **Postwar** (75+ years covering 2.8 million records)
-  - **Second World War** (6 years covering 1 million records)
-  - **Interwar** (21 years covering 1.3 million records)
-  - **Early 20th century** (17 years covering 1.1 million records)
-  - **Victorians** (51 years covering 0.8 million records)
-  - **Empire and Industry** (100 years covering 0.5 million records)
-  - **Early modern** (265 years covering 1.1 million records)
-  - **Medieval** (511 years covering 0.1 million records)
+## User testing recommendations
 
-It is currently also possible to reach the widget from a details page with the start and end dates and record distribution graphic set by the corresponding record. In this case there is no time period selected and 'Custom date range' is presented.
+### Testing of iteration two
 
-### Change start and end date
+The following user testing reports have been produced: 
 
-Changing the start or end date updates the number of records shown and greys out bars within the record distribution graphic outside of the new selection.
-
-There is no functional connection from the date controls to the time periods. For example, if a user was to use the date controls to refine to, say, the years which correspond to the Interwar period, the time periods element would not be updated to reflect this. Similarly, while it is possible to access the explorer page with date periods applied these are not reflected in the time periods. For an example of this, click the 'dated' link in [this record](https://alpha.nationalarchives.gov.uk/journey/record/E/40/4913)
-
-## Known issues
-
-The current implementation has significant accessibility problems and usability issues.
-
-### Accessibility issues
-
-There are several known accessibility issues. In no particular order, these are:
-
-- The **distribution graphic has no text equivalent** to communicate the information to users who are unable to perceive the graphic
-- The current approach requires **very fine adjustments** that is likely to cause significant issues for users with motor impairments and those using crude input devices (such as touch screens)
-- Displaying distributions from 0 to the millions within a maximum height of 130 often results in **bars that are very difficult to see**. ![Bars which represent thousands of records are difficult to distinguish](images/difficult_to_differentiate.png "Bars which represent thousands of records are difficult to distinguish")
-- **Controls overlap and obscure** each other rendering the information **invisible** and the controls **unreachable**. ![Controls overlap each other](images/controls_overlap.png "Controls overlap each other")
-- The start and end date refinements **do not provide adequate keyboard accessibility** (in that they can require keyboard to make hundreds of changes)
-
-**Note: these are just the immediately apparent accessibility problems. An audit would almost certainly reveal others.**
-
-### Usability and other issues
-
-- The current approach presents **issues for touch device** users, especially on smaller screens
-- Users found the **controls difficult to use** when refining to a narrow period of interest
-- Users found the **distribution graphic to be 'bunched up'** when applied to longer periods
-- Users were not always clear that **the four digit numbers are years**
-- Users have described the record distribution graphic as **'gimmicky'**
-- It is not always clear if/how elements of a page change in response to user actions (For example, it is very easy to miss that the results themselves or the record count has changed)
-- Users had difficulty understanding that the **date controls and time periods work independently** of each other
-- UX colleagues have **recommended marking key events on the timeline** but known issues about the current implementation show this would introduce additional usability and accessibility issues (if applied to _the current approach_)
-- The histogram presentation has led users to **believe they can click on the individual bars**. This is not currently possible and would present additional usability and accessibility issues if it was.
-- The are circumstances where the controls do not match the record distribution graphic which may lead to confusion ![Bar mismatch](images/bar_mismatch.png "Bar mismatch")
-- There are circumstances where if the explorer is linked to with a date boundary, but no era specified, the histogram will display as all periods, but the slider will display a strict date boundary. Therefore the histogram is not properly zoomed to the specific date boundaries. ![Histogram issue](images/histogram_issue.png)
-
-## Questions that we have
-
-- Does the distribution graph help a non-user understand what they are looking at and where to go next? Where does the distribution graph sit in the content priority?
-- Does it matter that the dating of records can lead to confusing results? For example, records relating to The United States appear where a filter has been applied from 1075 to 1094. See [this example](https://alpha.nationalarchives.gov.uk/collectionexplorer/?start_year=1075&end_year=1094&era=medieval)
-- What is a key event and how do these relate to time periods? Is WWII both a key event and a time period?
-- Do we still need to keep all items available when a user has made a selection? For example, if a user has refined to late 20th century, do they still need to see the Medieval time period?
-- Is there a point at which the record distribution graph is no longer useful to user?
-- Do people want to interact with the content using different filters at different levels? For example, do people need to apply a subject filter when at 'All periods'?
-
-## Initial thoughts
-
-- Should we represent the ability to browse by time on details pages?
-- Is it more helpful to show users (on the details page) where they are in time (i.e. Early modern)?
-- Should we have different visualisations/treatments to suit the scale of content (i.e. all periods vs Second World War)
-- The cause and effect of things is not very clear. For example, upon entering via 'All periods' you are shown a dense histogram and this can change to large blocks.
-- Search and browse are very different things and we feel it is confusing for users to show functionality which looks like search on something that is not a search tool.
-
-## Other options to consider
-
-[Historpedia.js](https://js.histropedia.com/index.html) has been mentioned as an approach that might be worth considering. This is a JavaScript-powered visualisation tool.
-
-# Proposals
-
-The _current_ proposals the next iteration included:
-
-- [Ash's](https://ds-beta-timeline-text.herokuapp.com/)
-- Matt's (link coming soon)
-- [Gwyn's](gwyn_proposal_iteration_two)
-
-These were then evolved into two converged prototypes by Ash & James. Ash's prototype was taken forward and sits in `main_prototype_iteration_one` as a PHP 7 application.
+* [User testing of iteration two](user_research/iteration_two_user_testing_report.pdf) 
+* [User testing of iteration one](user_research/iteration_one_user_testing_report.pdf)
