@@ -5,6 +5,7 @@
 * Iteration two
     * [Overview and user testing recommendations](#iteration-two)
     * [Screenshots](iterations/screenshots/iteration_two)
+    * [User flow](iterations/flows/)
     * [User testing report](user_research/iteration_two_user_testing_report.pdf)
 * Iteration one
     * [Overview](#iteration-one)
