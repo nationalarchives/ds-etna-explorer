@@ -2,6 +2,7 @@
 
 ## Contents
 
+* [User goals and stories](#user-goals-and-stories)
 * Iteration two
     * [Overview and user testing recommendations](#iteration-two)
     * [Screenshots](iterations/screenshots/iteration_two)
@@ -11,6 +12,10 @@
     * [Overview](#iteration-one)
     * [Screenshots](iterations/screenshots/iteration_one)
     * [User testing report](user_research/iteration_one_user_testing_report.pdf)
+
+## User goals and stories
+
+User stories that relate to Explorer can be found in [this section of the Miro board](https://miro.com/app/board/o9J_ko3MiYA=/?moveToWidget=3074457350875147116&cot=14) 
 
 ## Iterations
 
